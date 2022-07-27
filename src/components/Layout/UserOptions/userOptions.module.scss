@@ -1,4 +1,4 @@
-@import "../../../styles/general";
+@import "../../../styles/variables";
 
 .userOptions {
     display: flex;
@@ -15,10 +15,22 @@
 
         * {
             stroke-width: 1px;
-
+            fill : $white;
+            stroke: $white;
         }
 
         width : 30px;
         height: 30px;
     }
+}
+
+.user {
+    svg {
+
+        * {
+            stroke-width: 2px ;
+
+            fill : transparent;
+        }
+    } 
 }

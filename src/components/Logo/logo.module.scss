@@ -1,6 +1,13 @@
+@import "../../styles/variables";
+
 .miniLogo {
     svg {
         width : 45px;
         height : 42px;
+        
+        path {
+            fill : $white
+
+        }
     }
 }

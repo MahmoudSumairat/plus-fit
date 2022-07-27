@@ -9,7 +9,7 @@ const NavItem = ({ route }) => {
   return (
     !route.hideFromMenu && (
       <li className={navItem} key={route.link}>
-        <Link to={route.link}>{route.name} </Link>{" "}
+        <Link to={route.link}>{route.name} </Link>
       </li>
     )
   );

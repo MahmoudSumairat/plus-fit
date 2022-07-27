@@ -1,0 +1,20 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.slogan {
+    @include absolute-center();
+    color : $white;
+    font-size: 9rem;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    top : 45%;
+
+    .first {
+        transform : translateX(-15%)
+    }
+    .last {
+        transform : translateX(15%)
+    }
+
+}
