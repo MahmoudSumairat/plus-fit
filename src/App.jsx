@@ -1,15 +1,15 @@
-import { Provider } from "react-redux";
 import { BrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
 import store from "./redux/store";
+
 import "./App.scss";
+import AppContainer from "./AppContainer/AppContainer";
 
 function App() {
   return (
     <BrowserRouter>
       <Provider store={store}>
-        <div className="App">
-          Hello and welcome to Plus FIT <strong>Boss, Mahmoud!</strong>
-        </div>
+        <AppContainer />
       </Provider>
     </BrowserRouter>
   );
