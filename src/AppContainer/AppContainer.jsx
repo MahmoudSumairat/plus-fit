@@ -1,8 +1,9 @@
 import React from "react";
+import PageRoutes from "../routes/PageRoutes";
 import styles from "./appContainer.module.scss";
 
 const AppContainer = () => {
-  return <div>Hey Boss</div>;
+  return <PageRoutes />;
 };
 
 export default AppContainer;

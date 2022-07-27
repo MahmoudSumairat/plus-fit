@@ -1,4 +1,5 @@
 import Accessories from "../pages/Accessories/Accessories";
+import Bag from "../pages/Bag/Bag";
 import Hijabs from "../pages/Hijabs/Hijabs";
 import Home from "../pages/Home/Home";
 import Register from "../pages/Register/Register";
@@ -11,7 +12,8 @@ const routesList = [{
     name  : 'home',
     hideFromMenu : true,
     link : '/',
-    component : Home 
+    component : Home ,
+    exact : true
 },
 {
     name  : 'store',
@@ -48,6 +50,11 @@ const routesList = [{
     link : '/register',
     component : Register,
     hideFromMenu : true
+},
+{
+    name  : 'bag',
+    link : '/bag',
+    component : Bag,
 },
 ]
 

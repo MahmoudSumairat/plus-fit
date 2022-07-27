@@ -6,7 +6,14 @@ const PageRoutes = () => {
   return (
     <Routes>
       {routesList.map((route) => {
-        return <Route path={route.link} element={route.component} />;
+        return (
+          <Route
+            exact
+            key={route.link}
+            path={route.link}
+            element={<route.component />}
+          />
+        );
       })}
     </Routes>
   );
