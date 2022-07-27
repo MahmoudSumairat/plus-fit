@@ -1,0 +1,24 @@
+@import "../../../styles/general";
+
+.userOptions {
+    display: flex;
+    align-items: center;
+}
+
+.user,
+.bag {
+
+    margin : 0 10px;
+
+
+    svg {
+
+        * {
+            stroke-width: 1px;
+
+        }
+
+        width : 30px;
+        height: 30px;
+    }
+}

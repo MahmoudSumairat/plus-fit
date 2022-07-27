@@ -26,7 +26,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "generate-svg-icons": "svg2react-icon ./public/icons ./src/svg"
+    "generate-svg-icons": "svg2react-icon  ./public/icons ./src/svg"
   },
   "eslintConfig": {
     "extends": [
