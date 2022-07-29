@@ -1,5 +1,12 @@
 @import "./variables";
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    text-transform: uppercase;
+}
+
 html {
     font-family: "NotoSans";
     font-size : 62.5%; // 10px

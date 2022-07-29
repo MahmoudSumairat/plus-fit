@@ -1,12 +1,32 @@
 import React from "react";
+import Button from "../../shared/Button/Button";
 import styles from "./categoryBox.module.scss";
 
-const { categoryBox } = styles;
+const {
+  categoryBox,
+  categoryImage,
+  oddCategory,
+  evenCategory,
+  categoryTitle,
+  categoryButton,
+} = styles;
 
-const CategoryBox = ({ category }) => {
+const CategoryBox = ({ category, index }) => {
   return (
-    <div className={categoryBox}>
-      <img src={require(category.imageUrl).default} />
+    <div
+      className={`${categoryBox} ${
+        index % 2 === 0 ? evenCategory : oddCategory
+      }  `}
+    >
+      <p className={categoryTitle}>{category.title}</p>
+      <img
+        className={categoryImage}
+        src={category.imageUrl}
+        alt={category.title}
+      />
+      <Button className={categoryButton} buttonType="border">
+        shop now
+      </Button>
     </div>
   );
 };

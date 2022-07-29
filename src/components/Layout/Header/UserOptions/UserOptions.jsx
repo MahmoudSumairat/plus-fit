@@ -1,5 +1,5 @@
 import React from "react";
-import { User, Bag } from "../../../svg";
+import { User, Bag } from "../../../../svg";
 import styles from "./userOptions.module.scss";
 const { userOptions, user, bag } = styles;
 

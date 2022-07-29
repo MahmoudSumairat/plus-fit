@@ -1,0 +1,68 @@
+@import "../../.././styles/mixins";
+@import "../../.././styles/variables";
+
+
+.commonButton {
+    @include flex-center();
+    background: none;
+    border :0;
+    display: block;
+    font-weight: 500;
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+   
+
+    svg {
+        width: 3rem;
+        height: 1.2rem;
+        margin-left: .5rem;
+        transition: all .2s ease-in-out;
+
+    }
+
+    &.arrowButton {
+        // border-bottom: 1px solid $primary;
+        padding : 0;
+        position: relative;
+        padding-bottom: .5rem;
+
+        &::before {
+            transition: all .2s ease-in-out;
+
+            content : "";
+            display: block;
+            width : 100%;
+            border-bottom: 2px solid $primary;
+            position: absolute;
+            bottom: -2px;
+            transform: scaleX(0);
+            transform-origin: left;
+        }
+
+        &:hover {
+
+            &::before {
+                transform: scaleX(1);
+
+
+            }
+
+            svg {
+                transform: translateX(.5rem);
+ 
+            }
+        }
+    }
+
+
+    &.borderButton {
+        border : 1px solid currentColor;
+        padding : 1rem 2rem;
+        font-size: 1.6rem;
+        transition: all .1s ease-in-out;
+        &:hover {
+            padding : 1.4rem 2.3rem;
+        }
+    }
+}
+

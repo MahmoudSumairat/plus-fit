@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { getCategoriesForLandingPage } from "../../API/endpoints/categories";
+import Button from "../shared/Button/Button";
 import styles from "./categories.module.scss";
 import CategoryBox from "./CategoryBox/CategoryBox";
 
-const { categoriesSection } = styles;
+const { categoriesSection, categoriesRow, categoriesExplore } = styles;
 
 const Categories = () => {
   const [landingPageCategories, setLandingPageCategories] = useState([]);
@@ -14,9 +15,14 @@ const Categories = () => {
 
   return (
     <section className={categoriesSection}>
-      {landingPageCategories.map((category) => {
-        return <CategoryBox category={category} />;
-      })}
+      <div className={categoriesRow}>
+        {landingPageCategories.map((category, index) => {
+          return <CategoryBox index={index} key={index} category={category} />;
+        })}
+      </div>
+      <div className={categoriesExplore}>
+        <Button withArrow>EXPLORE MORE</Button>
+      </div>
     </section>
   );
 };
