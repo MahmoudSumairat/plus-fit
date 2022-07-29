@@ -7,14 +7,14 @@
 
 .user,
 .bag {
-
+    cursor: pointer;
     margin : 0 10px;
 
 
     svg {
 
         * {
-            stroke-width: 1px;
+            stroke-width: 2px;
             fill : $white;
             stroke: $white;
         }
@@ -28,7 +28,7 @@
     svg {
 
         * {
-            stroke-width: 2px ;
+            stroke-width: 3px ;
 
             fill : transparent;
         }

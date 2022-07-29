@@ -4,17 +4,20 @@
 .slogan {
     @include absolute-center();
     color : $white;
-    font-size: 9rem;
+    font-size: 6rem;
     text-transform: uppercase;
     display: flex;
     flex-direction: column;
-    top : 45%;
+    font-weight: 500;
+    // top : 45%;
+    // width: 60%;
+    
 
     .first {
-        transform : translateX(-15%)
+        transform : translateX(-17%)
     }
     .last {
-        transform : translateX(15%)
+        transform : translateX(17%)
     }
 
 }
