@@ -10,6 +10,7 @@
     font-weight: 500;
     transition: all .2s ease-in-out;
     cursor: pointer;
+    box-shadow: 2px 2px 10px rgba($secondary, .2);
    
 
     svg {
@@ -55,13 +56,36 @@
     }
 
 
-    &.borderButton {
-        border : 1px solid currentColor;
+    &.borderButtonLight,
+    &.borderButtonDark {
         padding : 1rem 2rem;
         font-size: 1.6rem;
-        transition: all .1s ease-in-out;
+        transition: all .2s ease-in-out;
+        
+      
+    }
+
+    &.borderButtonLight {
+        border : 1px solid $white;
+        color : $white;
+
         &:hover {
-            padding : 1.4rem 2.3rem;
+            background-color: $white;
+            color : $primary;
+            box-shadow: none;
+        }
+
+    }
+
+    &.borderButtonDark {
+        border : 1px solid $primary;
+        color : $primary;
+
+        &:hover {
+            background-color: $primary;
+            color : $white;
+            box-shadow: none;
+
         }
     }
 }

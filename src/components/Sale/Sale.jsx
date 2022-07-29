@@ -39,7 +39,7 @@ const Sale = () => {
         <p className={saleDescription}>
           refill your energy with a massive collection of brand new styles
         </p>
-        <Button buttonType="border">shop now</Button>
+        <Button buttonType="borderDark">shop now</Button>
       </div>
     </section>
   );

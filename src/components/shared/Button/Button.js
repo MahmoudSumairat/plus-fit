@@ -2,10 +2,17 @@ import React from "react";
 import styles from "./button.module.scss";
 import { ArrowRight } from "../../../svg";
 
-const { commonButton, arrowButton, borderButton, normalButton } = styles;
+const {
+  commonButton,
+  arrowButton,
+  borderButtonDark,
+  borderButtonLight,
+  normalButton,
+} = styles;
 
 const buttonTypes = {
-  border: borderButton,
+  borderLight: borderButtonLight,
+  borderDark: borderButtonDark,
   normal: normalButton,
 };
 

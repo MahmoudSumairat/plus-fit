@@ -21,7 +21,7 @@ const Categories = () => {
         })}
       </div>
       <div className={categoriesExplore}>
-        <Button withArrow>EXPLORE MORE</Button>
+        <Button buttonType="borderDark">EXPLORE MORE</Button>
       </div>
     </section>
   );

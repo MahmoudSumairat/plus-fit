@@ -24,7 +24,7 @@ const CategoryBox = ({ category, index }) => {
         src={category.imageUrl}
         alt={category.title}
       />
-      <Button className={categoryButton} buttonType="border">
+      <Button className={categoryButton} buttonType="borderLight">
         shop now
       </Button>
     </div>
