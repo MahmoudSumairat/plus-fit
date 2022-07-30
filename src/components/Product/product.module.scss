@@ -1,0 +1,71 @@
+@import "../../styles/variables";
+
+.productImage {
+    width: 100%;
+}
+
+.productInfo {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.productTitle,
+.productRating {
+    width: 85%;
+    margin : 0;
+}
+
+.productNewPrice,
+.productOldPrice {
+    width: 15%;
+}
+
+.productTitle {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color : $primary;
+    margin : 5px 0;
+}
+
+.productOldPrice {
+    font-size: 1.5rem;
+    margin : 5px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-right: 5px;
+
+    &::before {
+        content : "";
+        display: block;
+        width : 100%;
+        position: absolute;
+        right : 0;
+        top : 53%;
+        transform : translateY(-50%);
+        border-bottom : 1px solid $primary
+    }
+}
+
+.productNewPrice {
+    font-size: 1.7rem;
+    margin : 5px 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    padding-right: 5px;
+    color : $danger;
+    font-weight: 600;
+}
+
+.productRating {
+    margin : 5px 0;
+    svg {
+        width: 14px;
+        height: 14px;
+        margin : 0 2px;
+        fill : $primary
+    }
+}
+
+.productButton {width: 100%;}
