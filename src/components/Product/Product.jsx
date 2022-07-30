@@ -44,7 +44,9 @@ const Product = ({ product, className = "" }) => {
         <span className={sale ? productOldPrice : productNewPrice}>
           ${calculatePrice(true)}
         </span>
-        <span className={productRating}>{getRatingStars()}</span>
+        <span className={productRating}>
+          {getRatingStars()} <span>{rate}</span>{" "}
+        </span>
         {!!sale && <span className={productNewPrice}>${calculatePrice()}</span>}
       </div>
       <Button className={productButton}>add to bag</Button>

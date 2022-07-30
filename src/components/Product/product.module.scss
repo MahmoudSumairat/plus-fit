@@ -1,5 +1,9 @@
 @import "../../styles/variables";
 
+.productBox {display: flex;
+flex-direction: column;
+justify-content: space-between;}
+
 .productImage {
     width: 100%;
 }
@@ -60,11 +64,19 @@
 
 .productRating {
     margin : .5rem 0;
+    display: flex;
+    align-items: center;
     svg {
         width: 1.4rem;
         height: 1.4rem;
         margin : 0 .2rem;
         fill : $primary
+    }
+
+    span {
+        margin-left: .4rem;
+        margin-top: .2rem;
+
     }
 }
 
