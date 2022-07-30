@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../Logo/Logo";
 import UserOptions from "./UserOptions/UserOptions";
 import styles from "./header.module.scss";
-import Nav from "./Nav/Nav";
+import Nav from "../../Nav/Nav";
 import { Link } from "react-router-dom";
 
 const { header, headerLogo, headerNav, headerUserOptions } = styles;

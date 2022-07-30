@@ -24,16 +24,16 @@
     font-size: 1.5rem;
     font-weight: 400;
     color : $primary;
-    margin : 5px 0;
+    margin : .5rem 0;
 }
 
 .productOldPrice {
     font-size: 1.5rem;
-    margin : 5px 0;
+    margin : .5rem 0;
     display: flex;
     justify-content: center;
     position: relative;
-    padding-right: 5px;
+    padding-right: .5rem;
 
     &::before {
         content : "";
@@ -49,21 +49,21 @@
 
 .productNewPrice {
     font-size: 1.7rem;
-    margin : 5px 0;
+    margin : .5rem 0;
     display: flex;
     justify-content: center;
     position: relative;
-    padding-right: 5px;
+    padding-right: .5rem;
     color : $danger;
     font-weight: 600;
 }
 
 .productRating {
-    margin : 5px 0;
+    margin : .5rem 0;
     svg {
-        width: 14px;
-        height: 14px;
-        margin : 0 2px;
+        width: 1.4rem;
+        height: 1.4rem;
+        margin : 0 .2rem;
         fill : $primary
     }
 }

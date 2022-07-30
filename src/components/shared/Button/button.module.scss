@@ -22,13 +22,12 @@
     }
 
     &.normalButton {
-        padding : 10px 20px;
+        padding : 1rem 2rem;
         background-color: $primary;
         color : $white
     }
 
     &.arrowButton {
-        // border-bottom: 1px solid $primary;
         padding : 0;
         position: relative;
         padding-bottom: .5rem;
@@ -41,7 +40,7 @@
             width : 100%;
             border-bottom: 2px solid $primary;
             position: absolute;
-            bottom: -2px;
+            bottom: -.2rem;
             transform: scaleX(0);
             transform-origin: left;
         }

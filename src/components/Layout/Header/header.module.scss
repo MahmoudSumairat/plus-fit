@@ -8,7 +8,7 @@
     left: 50%;
     transform: translateX(-50%);
     position: absolute;
-    padding : 20px
+    padding : 2rem
 }
 
 .headerLogo,
@@ -20,7 +20,7 @@
 }
 
 .headerNav {
-    padding : 20px;
+    padding : 2rem;
     width : 50%;
     @include flex-center();
 }
