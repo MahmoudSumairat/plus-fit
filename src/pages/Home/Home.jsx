@@ -1,5 +1,6 @@
 import React from "react";
 import Banner from "../../components/Banner/Banner";
+import BecomeMember from "../../components/BecomeMember/BecomeMember";
 import BestSellers from "../../components/BestSellers/BestSellers";
 import Categories from "../../components/Categories/Categories";
 import Sale from "../../components/Sale/Sale";
@@ -14,6 +15,7 @@ const Home = () => {
       <Categories />
       <Sale />
       <BestSellers />
+      <BecomeMember />
     </div>
   );
 };
