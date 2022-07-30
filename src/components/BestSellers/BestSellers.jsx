@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getBestSellerProducts } from "../../API/endpoints/bestSellers";
 import Product from "../Product/Product";
-import Button from "../shared/Button/Button";
+import Button from "../core/Button/Button";
 import styles from "./bestSellers.module.scss";
 const {
   bestSellersTitle,

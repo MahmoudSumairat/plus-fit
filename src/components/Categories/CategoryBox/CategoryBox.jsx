@@ -1,5 +1,5 @@
 import React from "react";
-import Button from "../../shared/Button/Button";
+import Button from "../../core/Button/Button";
 import styles from "./categoryBox.module.scss";
 
 const {

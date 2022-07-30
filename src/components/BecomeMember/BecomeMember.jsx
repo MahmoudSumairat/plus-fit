@@ -2,8 +2,8 @@ import React, { useState, useEffect } from "react";
 import { getBecomeMemberSale } from "../../API/endpoints/becomeMember";
 import becomeMemberImage from "../../data/becomeMember/Images/becomeMember.jpg";
 import becomeMemberLogo from "../../data/becomeMember/Images/+FIT Logo.svg";
-import Button from "../shared/Button/Button";
-import Input from "../shared/Input/Input";
+import Button from "../core/Button/Button";
+import Input from "../core/Input/Input";
 
 import styles from "./becomeMember.module.scss";
 

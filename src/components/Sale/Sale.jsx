@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./sale.module.scss";
 import saleImg from "../../data/sale/images/sale.jpg";
 import { getSaleValue, getSaleStylesCount } from "../../API/endpoints/sale";
-import Button from "../shared/Button/Button";
+import Button from "../core/Button/Button";
 const {
   saleSection,
   saleImage,

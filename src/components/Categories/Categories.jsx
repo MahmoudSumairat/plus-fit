@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { getCategoriesForLandingPage } from "../../API/endpoints/categories";
-import Button from "../shared/Button/Button";
+import Button from "../core/Button/Button";
 import styles from "./categories.module.scss";
 import CategoryBox from "./CategoryBox/CategoryBox";
 
