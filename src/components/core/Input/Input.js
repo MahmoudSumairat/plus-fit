@@ -24,6 +24,7 @@ const Input = ({
   className = "",
   styleType = "standard",
   error = "",
+  required,
   ...props
 }) => {
   const hasErrorClass = !!error ? inputError : "";
@@ -32,6 +33,7 @@ const Input = ({
     <div className={`${inputContainer} ${className} ${hasErrorClass} `}>
       <label htmlFor={id} className={inputLabel}>
         {label}
+        {required && "*"}
       </label>
       <input
         className={`${input} ${inputStyleTypes[styleType]} `}

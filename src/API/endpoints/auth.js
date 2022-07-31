@@ -2,4 +2,8 @@ const login = (loginData) => {
   return Promise.resolve();
 };
 
-export { login };
+const register = (registerData) => {
+  return Promise.resolve();
+};
+
+export { login, register };

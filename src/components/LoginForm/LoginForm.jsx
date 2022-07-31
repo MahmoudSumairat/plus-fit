@@ -7,6 +7,7 @@ import { login } from "../../API/endpoints/auth";
 import { useDispatch } from "react-redux";
 import { login as loginAction } from "../../redux/actionCreators/auth";
 import { emailValidation, passwordValidation } from "../../validations";
+import getFormValid from "../../helpers/getFormValid";
 
 const {
   loginDescription,
@@ -86,6 +87,7 @@ const LoginForm = () => {
             className={loginButton}
             buttonType="borderDark"
             type="button"
+            disabled={getFormValid(errors)}
           >
             login
           </Button>
