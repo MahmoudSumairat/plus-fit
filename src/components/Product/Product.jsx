@@ -31,8 +31,8 @@ const Product = ({ product, className = "" }) => {
     for (let i = 0; i < counter; i++) {
       counterArr.push(i);
     }
-    return counterArr.map(() => {
-      return <StarFill />;
+    return counterArr.map((item, index) => {
+      return <StarFill key={index} />;
     });
   };
 

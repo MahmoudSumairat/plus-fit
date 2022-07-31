@@ -3,16 +3,19 @@
 .inputContainer {
     display: flex;
     flex-direction: column;
-    margin : 1rem 0;
+    margin : 1.5rem 0;
+    position: relative;
 }   
 
 .input {
-    padding : .5rem 1rem;
+    padding : 1rem 1.5rem;
     background-color: transparent;
     border : 1px solid $primary;
+    text-transform: lowercase;
 
     &::placeholder {
         font-size: 1.2rem;
+        text-transform: uppercase;
     }
 
  
@@ -21,4 +24,19 @@
         border-right : 0;
     }
 
+}
+
+.inputLabel {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    font-weight: 300;
+}
+
+.inputErrorMsg {
+    position: absolute;
+    color  :$danger;
+    bottom : 0;
+    // transform: translateY(130%);
+    margin-bottom: -2rem;
+    font-size: 1rem;
 }

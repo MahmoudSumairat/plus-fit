@@ -10,7 +10,7 @@ const Nav = () => {
     <nav className={nav}>
       <ul className={navList}>
         {routesList.map((route) => {
-          return <NavItem route={route} />;
+          return <NavItem key={route.link} route={route} />;
         })}
       </ul>
     </nav>

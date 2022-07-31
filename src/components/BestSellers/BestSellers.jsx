@@ -22,8 +22,14 @@ const BestSellers = () => {
     <section className={bestSellersSection}>
       <h2 className={bestSellersTitle}>Best sellers</h2>
       <div className={bestSellersProductsContainer}>
-        {bestSellerProducts.map((product) => {
-          return <Product className={bestSellersProduct} product={product} />;
+        {bestSellerProducts.map((product, index) => {
+          return (
+            <Product
+              key={index}
+              className={bestSellersProduct}
+              product={product}
+            />
+          );
         })}
       </div>
       <div className={bestSellersExplore}>

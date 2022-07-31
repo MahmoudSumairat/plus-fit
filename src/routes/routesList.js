@@ -2,6 +2,7 @@ import Accessories from "../pages/Accessories/Accessories";
 import Bag from "../pages/Bag/Bag";
 import Hijabs from "../pages/Hijabs/Hijabs";
 import Home from "../pages/Home/Home";
+import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import Shirts from "../pages/Shirts/Shirts";
 import Shoes from "../pages/Shoes/Shoes";
@@ -51,6 +52,14 @@ const routesList = [
     link: "/register",
     component: Register,
     hideFromMenu: true,
+    hideLayoutComponents: true,
+  },
+  {
+    name: "login",
+    link: "/login",
+    component: Login,
+    hideFromMenu: true,
+    hideLayoutComponents: true,
   },
   {
     name: "bag",

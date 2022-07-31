@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./input.module.scss";
 import { v4 as uuidv4 } from "uuid";
+import Animate from "../Animate/Animate";
 
 const {
   inputContainer,
@@ -37,7 +38,9 @@ const Input = ({
         id={id}
         {...props}
       />
-      {!!error && <span className={inputErrorMsg}>{error}</span>}
+      <Animate animationType="fadeTopBottom" showsIn={!!error}>
+        <span className={inputErrorMsg}>{error}</span>
+      </Animate>
     </div>
   );
 };

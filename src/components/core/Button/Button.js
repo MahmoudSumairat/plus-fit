@@ -21,12 +21,15 @@ const Button = ({
   withArrow,
   buttonType = "normal",
   className = "",
+  ...props
 }) => {
   return (
     <button
+      type="button"
       className={`${commonButton} ${withArrow ? arrowButton : ""} ${
         buttonTypes[buttonType]
       }  ${className} `}
+      {...props}
     >
       {children} {withArrow && <ArrowRight />}
     </button>

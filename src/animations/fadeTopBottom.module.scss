@@ -1,0 +1,21 @@
+.fadeTopBottomEnter {
+    transform: translateY(-10px);
+    opacity: 0;
+
+};
+.fadeTopBottomEnterActive {
+    transform: translateY(0);
+    opacity: 1;
+    transition: all .2s ease-in-out;
+};
+.fadeTopBottomExit {
+    transform: translateY(-10px);
+    opacity: 1;
+    color : blue;
+
+};
+.fadeTopBottomExitActive {
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: all .2s ease-in-out;
+};

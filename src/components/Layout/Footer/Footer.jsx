@@ -2,6 +2,7 @@ import React from "react";
 import Nav from "../../Nav/Nav";
 import { Facebook, Insta, Twitter, Tiktok, FitLogo } from "../../../svg";
 import styles from "./footer.module.scss";
+import useHideLayoutComponents from "../../../hooks/useHideLayoutComponents";
 
 const {
   footerSection,
@@ -13,6 +14,12 @@ const {
 } = styles;
 
 const Footer = () => {
+  const hideLayoutComponents = useHideLayoutComponents();
+
+  if (hideLayoutComponents) {
+    return null;
+  }
+
   return (
     <footer className={footerSection}>
       <div className={footerLogo}>
