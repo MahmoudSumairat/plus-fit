@@ -51,6 +51,7 @@ const LoginForm = () => {
 
   const onSubmit = () => {
     login(values).then(() => {
+      localStorage.setItem("authToken", "authToken");
       dispatch(loginAction("authToken"));
       navigate("/", { replace: true });
     });

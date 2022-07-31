@@ -53,6 +53,7 @@ const routesList = [
     component: Register,
     hideFromMenu: true,
     hideLayoutComponents: true,
+    authRelated: true,
   },
   {
     name: "login",
@@ -60,6 +61,7 @@ const routesList = [
     component: Login,
     hideFromMenu: true,
     hideLayoutComponents: true,
+    authRelated: true,
   },
   {
     name: "bag",
