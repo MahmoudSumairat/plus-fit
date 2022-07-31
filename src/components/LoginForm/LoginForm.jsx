@@ -78,6 +78,7 @@ const LoginForm = () => {
             onChange={handleInputChange}
             error={errors.password.message}
             name="password"
+            type="password"
           />
 
           <Button

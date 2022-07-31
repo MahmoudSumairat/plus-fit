@@ -1,36 +1,34 @@
 @import "../../../../styles/variables";
 
 .userOptions {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .user,
 .bag {
-    cursor: pointer;
-    margin : 0 1rem;
+  cursor: pointer;
+  margin: 0 1rem;
+  position: relative;
 
-
-    svg {
-
-        * {
-            stroke-width: 1px;
-            fill : $white;
-            stroke: $white;
-        }
-
-        width : 3rem;
-        height: 3rem;
+  svg {
+    * {
+      stroke-width: 1px;
+      fill: $white;
+      stroke: $white;
     }
+
+    width: 3rem;
+    height: 3rem;
+  }
 }
 
 .user {
-    svg {
+  svg {
+    * {
+      stroke-width: 3px;
 
-        * {
-            stroke-width: 3px ;
-
-            fill : transparent;
-        }
-    } 
+      fill: transparent;
+    }
+  }
 }

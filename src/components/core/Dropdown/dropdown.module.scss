@@ -1,0 +1,45 @@
+@import "../../../styles/variables";
+
+.dropdownContainer {
+  position: absolute;
+  margin: 1rem 0;
+  left: 0;
+}
+
+.dropdownList {
+  border: 1px solid $primary;
+}
+
+.dropdownItem {
+  padding: 1rem;
+  font-size: 1.4rem;
+  font-weight: 300;
+  background-color: $white;
+  transition: all 0.1s ease-in-out;
+  border-bottom: 1px solid rgba($primary, 0.5);
+  display: flex;
+  align-items: center;
+
+  &:hover {
+    background-color: darken($white, 10);
+  }
+
+  &:first-of-type {
+    .dropdownOptionIcon {
+      path {
+        fill: none;
+      }
+    }
+  }
+
+  .dropdownOptionIcon {
+    margin-right: 1rem;
+    path {
+      fill: $primary;
+      stroke: $primary;
+    }
+    fill: $primary;
+    width: 2rem;
+    height: 2rem;
+  }
+}
