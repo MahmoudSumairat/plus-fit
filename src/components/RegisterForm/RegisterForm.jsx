@@ -8,16 +8,25 @@ import { formFields, getErrors, getValues, validations } from "./formFields";
 import { register } from "../../API/endpoints/auth";
 import { login as loginAction } from "../../redux/actionCreators/auth";
 import getFormValid from "../../helpers/getFormValid";
+import authStyles from "../../styles/auth.module.scss";
 
 const {
   registerFormContainer,
   registerForm,
   registerFields,
   registerDescription,
-  registerInput,
   registerButton,
   registerLink,
 } = styles;
+
+const {
+  authForm,
+  authFields,
+  authInput,
+  authDescription,
+  authButton,
+  authLink,
+} = authStyles;
 
 const RegisterForm = () => {
   const [values, setValues] = useState(getValues());
@@ -54,14 +63,16 @@ const RegisterForm = () => {
 
   return (
     <div className={registerFormContainer}>
-      <form className={registerForm}>
-        <div className={registerFields}>
-          <p className={registerDescription}>ENTER YOUR INFORMATION</p>
+      <form className={`${registerForm} ${authForm} `}>
+        <div className={`${registerFields} ${authFields}`}>
+          <p className={`${authDescription} ${registerDescription}`}>
+            ENTER YOUR INFORMATION
+          </p>
 
           {formFields.map((field) => {
             return (
               <Input
-                className={registerInput}
+                className={authInput}
                 onChange={(e) => handleInputChange(e, field)}
                 error={errors[field.name].message}
                 {...field}
@@ -71,15 +82,18 @@ const RegisterForm = () => {
           <Button
             buttonType="borderDark"
             label="first name"
-            className={registerButton}
+            className={`${authButton} ${registerButton} `}
             onClick={onSubmit}
             disabled={!getFormValid(errors)}
           >
             sign up
           </Button>
 
-          <Link className={registerLink} to="/login">
+          <Link className={`${authLink} ${registerLink} `} to="/login">
             i already have an account
+          </Link>
+          <Link className={`${authLink} ${registerLink} `} to="/">
+            Continue as a guest
           </Link>
         </div>
       </form>

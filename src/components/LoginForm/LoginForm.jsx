@@ -8,17 +8,18 @@ import { useDispatch } from "react-redux";
 import { login as loginAction } from "../../redux/actionCreators/auth";
 import { emailValidation, passwordValidation } from "../../validations";
 import getFormValid from "../../helpers/getFormValid";
+import authStyles from "../../styles/auth.module.scss";
+
+const { loginFormWrapper, loginForm } = styles;
 
 const {
-  loginDescription,
-  loginEmail,
-  loginPassword,
-  loginFields,
-  loginButton,
-  loginLink,
-  loginFormWrapper,
-  loginForm,
-} = styles;
+  authForm,
+  authFields,
+  authInput,
+  authDescription,
+  authButton,
+  authLink,
+} = authStyles;
 
 const validations = {
   email: emailValidation,
@@ -58,14 +59,16 @@ const LoginForm = () => {
     });
   };
 
+  console.log("valid : ", errors, getFormValid(errors));
+
   return (
     <div className={loginFormWrapper}>
-      <form className={loginForm}>
-        <div className={loginFields}>
-          <p className={loginDescription}>login using email and password</p>
+      <form className={`${authForm} ${loginForm}`}>
+        <div className={authFields}>
+          <p className={authDescription}>login using email and password</p>
 
           <Input
-            className={loginEmail}
+            className={authInput}
             label="email*"
             placeholder="enter your email address"
             onChange={handleInputChange}
@@ -73,7 +76,7 @@ const LoginForm = () => {
             name="email"
           />
           <Input
-            className={loginPassword}
+            className={authInput}
             label="password*"
             placeholder="enter your password"
             onChange={handleInputChange}
@@ -84,16 +87,20 @@ const LoginForm = () => {
 
           <Button
             onClick={onSubmit}
-            className={loginButton}
+            className={authButton}
             buttonType="borderDark"
             type="button"
-            disabled={getFormValid(errors)}
+            disabled={!getFormValid(errors)}
           >
             login
           </Button>
 
-          <Link className={loginLink} to="/register">
+          <Link className={authLink} to="/register">
             i don't have an account
+          </Link>
+
+          <Link className={authLink} to="/">
+            Continue as a guest
           </Link>
         </div>
       </form>

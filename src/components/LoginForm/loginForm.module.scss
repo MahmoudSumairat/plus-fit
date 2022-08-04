@@ -2,53 +2,16 @@
 @import "../../styles/mixins";
 
 .loginFormWrapper {
-    filter: drop-shadow(-10px -10px 30px rgba($black, .9));
-    height: 100vh;
-    width: 60%;
-    position: absolute;
-    right: 0;
-    top : 0;
-    z-index: 99;
-
+  filter: drop-shadow(-10px -10px 30px rgba($black, 0.9));
+  height: 100vh;
+  width: 60%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 99;
 }
 
 .loginForm {
-    background-color: $white;
-    height: 100%;
-    clip-path: polygon(48% 0, 100% 0, 100% 100%, 0% 100%);
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-}
-
-
-.loginFields {
-    width: 35%;
-    margin-right: 15%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.loginDescription {
-    font-size: 1.8rem;
-    margin-bottom: 5rem;
-}
-
-.loginEmail,
-.loginPassword {
-    width: 100%;
-}
-
-.loginButton {
-    width: 100%;
-    margin-top: 4rem;
-}
-
-.loginLink {
-    display: inline-block;
-    margin-top: 4rem;
-    text-align: center;
-    font-size: 1.4rem;
-    border-bottom: 1px solid $primary;
+  clip-path: polygon(48% 0, 100% 0, 100% 100%, 0% 100%);
+  justify-content: flex-end;
 }

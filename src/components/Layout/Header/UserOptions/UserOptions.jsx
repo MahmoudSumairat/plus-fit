@@ -8,7 +8,7 @@ import useIsAuthenticated from "../../../../hooks/useIsAuthenticated";
 import { useDispatch } from "react-redux";
 import { logout } from "../../../../redux/actionCreators/auth";
 
-const { userOptions, user, bag } = styles;
+const { userOptions, user, bag, userOptionsDropdown } = styles;
 
 const UserOptions = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -39,6 +39,7 @@ const UserOptions = () => {
           <User />
         </span>
         <Dropdown
+          className={userOptionsDropdown}
           parentRef={parentRef}
           setShowDropdown={setShowDropdown}
           showDropdown={showDropdown}

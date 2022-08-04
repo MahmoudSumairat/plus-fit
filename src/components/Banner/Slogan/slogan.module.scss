@@ -2,22 +2,20 @@
 @import "../../../styles/variables";
 
 .slogan {
-    @include absolute-center();
-    color : $white;
-    font-size: 6rem;
-    text-transform: uppercase;
-    display: flex;
-    flex-direction: column;
-    font-weight: 500;
-    // top : 45%;
-    // width: 60%;
-    
+  @include absolute-center();
+  color: $white;
+  font-size: 7.5rem;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+  line-height: 1;
+  font-style: italic;
 
-    .first {
-        transform : translateX(-17%)
-    }
-    .last {
-        transform : translateX(17%)
-    }
-
+  .first {
+    transform: translateX(-17%);
+  }
+  .last {
+    transform: translateX(17%);
+  }
 }

@@ -9,10 +9,11 @@
   font-weight: 500;
   transition: all 0.2s ease-in-out;
   cursor: pointer;
-  // box-shadow: 2px 2px 10px rgba($secondary, .2);
+  font-size: 1.7rem;
 
   &:disabled {
     opacity: 0.5;
+    cursor: default;
   }
 
   svg {
@@ -79,7 +80,8 @@
     }
 
     &:disabled:hover {
-      background-color: $white !important;
+      background-color: $primary;
+      color: $white;
     }
   }
 
@@ -94,7 +96,8 @@
     }
 
     &:disabled:hover {
-      background-color: $primary;
+      background-color: $white;
+      color: $primary;
     }
   }
 }

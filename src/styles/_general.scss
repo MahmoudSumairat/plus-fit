@@ -3,43 +3,41 @@
 *,
 *::after,
 *::before {
-    box-sizing: border-box;
-    text-transform: uppercase;
-
-   
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-family: "Rajdhani" !important;
 }
 
 html {
-    font-family: "NotoSans";
-    font-size : 62.5%; // 10px
+  font-size: 62.5%; // 10px
 
-    &::-webkit-scrollbar {
-        display: none;
-    }
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 body {
-    padding : 0;
-    margin : 0;
-    background-color: $white;
+  padding: 0;
+  margin: 0;
+  background-color: $white;
 }
 
 ul {
-    padding : 0;
-    margin : 0;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
-    color : currentColor
+  text-decoration: none;
+  color: currentColor;
 }
 
 input {
-    &:focus,
-    &:focus-visible,
-    &:active {
-        outline-width: 0 !important;
-        box-shadow: none !important;
-    }
+  &:focus,
+  &:focus-visible,
+  &:active {
+    outline-width: 0 !important;
+    box-shadow: none !important;
+  }
 }

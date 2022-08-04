@@ -6,7 +6,13 @@ import styles from "./dropdown.module.scss";
 const { dropdownContainer, dropdownList, dropdownItem, dropdownOptionIcon } =
   styles;
 
-const Dropdown = ({ options, showDropdown, setShowDropdown, parentRef }) => {
+const Dropdown = ({
+  options,
+  showDropdown,
+  setShowDropdown,
+  parentRef,
+  className,
+}) => {
   const navigate = useNavigate();
 
   const wrapperRef = useRef(null);
@@ -30,7 +36,7 @@ const Dropdown = ({ options, showDropdown, setShowDropdown, parentRef }) => {
   }, [wrapperRef]);
   return (
     <Animate animationType="fadeTopBottom" showsIn={showDropdown}>
-      <div ref={wrapperRef} className={dropdownContainer}>
+      <div ref={wrapperRef} className={`${dropdownContainer} ${className} `}>
         <ul className={dropdownList}>
           {options.map((option) => {
             return (

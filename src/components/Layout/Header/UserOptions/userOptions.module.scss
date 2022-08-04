@@ -11,9 +11,16 @@
   margin: 0 1rem;
   position: relative;
 
+  &:hover {
+    svg {
+      filter: drop-shadow(0.1rem 0.1rem 0.3rem $white);
+    }
+  }
+
   svg {
+    transition: all 0.1s ease-in-out;
+
     * {
-      stroke-width: 1px;
       fill: $white;
       stroke: $white;
     }
@@ -23,12 +30,22 @@
   }
 }
 
+.bag {
+  svg {
+    * {
+      stroke: transparent;
+    }
+  }
+}
+
 .user {
   svg {
     * {
-      stroke-width: 3px;
-
       fill: transparent;
     }
   }
+}
+
+.userOptionsDropdown {
+  margin-left: -100px;
 }

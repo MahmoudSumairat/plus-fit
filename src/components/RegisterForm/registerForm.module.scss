@@ -11,50 +11,23 @@
 }
 
 .registerForm {
-  background-color: $white;
-  height: 100%;
   clip-path: polygon(0 0, 100% 0, 63% 100%, 0% 100%);
-  display: flex;
   justify-content: flex-start;
-  align-items: center;
 }
 
 .registerFields {
-  width: 35%;
   margin-left: 15%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .registerDescription {
-  font-size: 1.8rem;
-  margin-bottom: 2rem;
-}
-
-.registerInput {
-  width: 100%;
+  margin-bottom: 1rem;
 }
 
 .registerButton {
-  width: 100%;
-  margin-top: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
 }
 
 .registerLink {
-  display: inline-block;
-  margin-top: 4rem;
-  text-align: center;
-  font-size: 1.4rem;
-  border-bottom: 1px solid $primary;
-}
-
-.fitLogo {
-  width: 9rem;
-  position: absolute;
-  top: 0;
-  left: 4rem;
-  path {
-    fill: $white;
-  }
+  margin: 1rem 0;
 }
