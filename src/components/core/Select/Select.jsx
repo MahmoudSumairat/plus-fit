@@ -18,10 +18,11 @@ const getSelectButtonText = (items, defaultValue, placeholder) => {
 
 const Select = ({
   label = "select",
-  items,
+  items = [],
   defaultValue = null,
   placeholder = "select",
   onChange = () => {},
+  className = "",
 }) => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [value, setValue] = useState(defaultValue);
@@ -38,7 +39,7 @@ const Select = ({
   };
 
   return (
-    <div className={selectContainer}>
+    <div className={`${selectContainer} ${className} `}>
       <label className={selectLabel}>{label}</label>
       <Button
         className={`${selectButton} ${showDropdown ? opened : ""} `}

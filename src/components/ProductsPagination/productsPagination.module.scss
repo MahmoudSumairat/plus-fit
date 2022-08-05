@@ -1,0 +1,24 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.productsPaginationContainer {
+  @include flex-center();
+  margin-top: 3rem;
+}
+
+.productsPage {
+  @include flex-center();
+  cursor: pointer;
+  margin: 10px;
+  font-size: 2rem;
+  border: 1px solid $primary;
+  height: 3rem;
+  width: 3rem;
+  transition: all 0.1s ease-in-out;
+
+  &:hover,
+  &.activePage {
+    background-color: $primary;
+    color: $white;
+  }
+}

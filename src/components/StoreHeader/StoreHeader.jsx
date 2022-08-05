@@ -1,11 +1,14 @@
 import React from "react";
 import productsSortings from "../../data/lookups/productsSortings";
+import { Filter } from "../../svg";
 import Select from "../core/Select/Select";
 import styles from "./storeHeader.module.scss";
-const { storeHeader, storeProductsCount, storeFilterIcon } = styles;
+const { storeHeader, storeProductsCount, storeFilterIcon, filterOpen } = styles;
 
-const StoreHeader = () => {
+const StoreHeader = ({ getToggleProps, isExpanded }) => {
   const dummyItems = productsSortings;
+
+  const isOpenClass = isExpanded ? filterOpen : "";
 
   return (
     <div className={storeHeader}>
@@ -18,7 +21,12 @@ const StoreHeader = () => {
         />
         <span className={storeProductsCount}></span>
       </div>
-      <span className={storeFilterIcon}></span>
+      <span
+        {...getToggleProps()}
+        className={`${storeFilterIcon} ${isOpenClass} `}
+      >
+        <Filter />
+      </span>
     </div>
   );
 };

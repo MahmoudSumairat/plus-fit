@@ -1,3 +1,31 @@
+@import "../../styles/variables";
+
 .storeHeader {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.storeFilterIcon {
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.1s ease-in-out;
+
+  svg {
+    transition: all 0.1s ease-in-out;
+
+    width: 3rem;
+    height: 3rem;
+  }
+}
+
+.filterOpen {
+  background: $primary;
+
+  svg {
+    path {
+      fill: $white;
+      stroke: $white;
+    }
+  }
 }

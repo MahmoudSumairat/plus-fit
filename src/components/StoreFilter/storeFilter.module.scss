@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+
+.storeFilter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba($secondary, 0.2);
+  margin-top: 3rem;
+}
+
+.storeSelect {
+  width: 21%;
+  button {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    width: 90%;
+  }
+}
