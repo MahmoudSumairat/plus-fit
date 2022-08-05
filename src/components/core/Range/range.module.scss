@@ -1,0 +1,51 @@
+@import "../../../styles/variables";
+
+.rangeWrapper {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
+.rangeContainer {
+  position: relative;
+  margin-top: 4rem;
+  height: 1px;
+  display: inline-block;
+  width: 30rem;
+  background-color: transparent;
+  height: 50px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    border-bottom: 4px solid rgba($primary, 0.2);
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+  }
+
+  span {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 2rem;
+    width: 2rem;
+    background-color: $primary;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:first-of-type {
+      left: 0;
+    }
+
+    &:last-of-type {
+      left: calc(100% - 2rem);
+    }
+  }
+}
+
+.rangeValue {
+  font-size: 1.6rem;
+  font-weight: 600;
+}

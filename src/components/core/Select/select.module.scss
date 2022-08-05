@@ -1,0 +1,27 @@
+.selectContainer {
+  position: relative;
+  display: inline-block;
+}
+
+.selectLabel {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  display: block;
+  font-weight: 500;
+}
+
+.selectDropdown {
+  width: 100%;
+}
+
+.selectButton {
+  span {
+    margin-left: 3rem;
+  }
+
+  &.opened {
+    svg {
+      transform: rotateZ(180deg);
+    }
+  }
+}

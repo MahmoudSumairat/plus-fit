@@ -5,9 +5,9 @@ import NavItem from "./NavItem/NavItem";
 
 const { nav, navList } = styles;
 
-const Nav = () => {
+const Nav = ({ className }) => {
   return (
-    <nav className={nav}>
+    <nav className={`${nav} ${className} `}>
       <ul className={navList}>
         {routesList.map((route) => {
           return <NavItem key={route.link} route={route} />;

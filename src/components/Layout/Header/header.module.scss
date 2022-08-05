@@ -1,31 +1,77 @@
 @import "../../../styles/mixins";
-
+@import "../../../styles/variables";
 
 .header {
-    display: flex;
-    align-items:   center;
-    width: 90%;
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
-    padding : 2rem
+  display: flex;
+  align-items: center;
+  width: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  padding: 2rem;
 }
 
 .headerLogo,
 .headerUserOptions {
-    width: 25%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.headerLogo {
+  &.darkHeader {
+    svg {
+      path {
+        stroke: $primary;
+        fill: $primary;
+      }
+      fill: $primary;
+    }
+  }
+}
+
+.headerUserOptions {
+  &.darkHeader {
+    svg {
+      transition: all 0.1s ease-in-out;
+
+      * {
+        fill: transparent;
+        stroke: $primary;
+      }
+    }
+  }
 }
 
 .headerNav {
-    padding : 2rem;
-    width : 50%;
-    @include flex-center();
+  padding: 2rem;
+  width: 50%;
+  @include flex-center();
 }
 
-
 .headerUserOptions {
-    justify-content: flex-end;
+  justify-content: flex-end;
+}
+
+.lightHeader {
+  li {
+    a {
+      color: $white;
+    }
+  }
+}
+
+.darkHeader {
+  li {
+    a {
+      color: $primary;
+
+      &:hover {
+        color: $primary;
+
+        text-shadow: 0.1rem 0.1rem 0.3rem $primary;
+      }
+    }
+  }
 }

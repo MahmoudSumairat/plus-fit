@@ -16,11 +16,17 @@
     cursor: default;
   }
 
+  .buttonIcon {
+    svg {
+      fill: $primary;
+    }
+  }
+
   svg {
     width: 3rem;
     height: 1.2rem;
     margin-left: 0.5rem;
-    transition: all 0.2s ease-in-out;
+    transition: transform 0.1s ease-in-out;
   }
 
   &.normalButton {
@@ -30,35 +36,6 @@
 
     &:disabled:hover {
       background-color: $primary;
-    }
-  }
-
-  &.arrowButton {
-    padding: 0;
-    position: relative;
-    padding-bottom: 0.5rem;
-
-    &::before {
-      transition: all 0.2s ease-in-out;
-
-      content: "";
-      display: block;
-      width: 100%;
-      border-bottom: 2px solid $primary;
-      position: absolute;
-      bottom: -0.2rem;
-      transform: scaleX(0);
-      transform-origin: left;
-    }
-
-    &:hover {
-      &::before {
-        transform: scaleX(1);
-      }
-
-      svg {
-        transform: translateX(0.5rem);
-      }
     }
   }
 
@@ -83,6 +60,12 @@
       background-color: $primary;
       color: $white;
     }
+
+    .buttonIcon {
+      svg {
+        fill: $white;
+      }
+    }
   }
 
   &.borderButtonDark {
@@ -99,5 +82,15 @@
       background-color: $white;
       color: $primary;
     }
+
+    .buttonIcon {
+      svg {
+        fill: $primary;
+      }
+    }
   }
+}
+
+.buttonIcon {
+  margin-left: 10px;
 }

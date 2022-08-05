@@ -12,6 +12,7 @@ const Dropdown = ({
   setShowDropdown,
   parentRef,
   className,
+  onChange,
 }) => {
   const navigate = useNavigate();
 
@@ -34,6 +35,21 @@ const Dropdown = ({
     };
     /* eslint-disable */
   }, [wrapperRef]);
+
+  const onItemClick = (option) => {
+    setShowDropdown(false);
+
+    if (onChange) {
+      return onChange(option);
+    }
+
+    if (option.onClick) {
+      return option.onClick;
+    }
+
+    navigate(option.linkTo, { replace: true });
+  };
+
   return (
     <Animate animationType="fadeTopBottom" showsIn={showDropdown}>
       <div ref={wrapperRef} className={`${dropdownContainer} ${className} `}>
@@ -41,11 +57,7 @@ const Dropdown = ({
           {options.map((option) => {
             return (
               <li
-                onClick={() =>
-                  option.linkTo
-                    ? navigate(option.linkTo, { replace: true })
-                    : option.onClick()
-                }
+                onClick={() => onItemClick(option)}
                 className={dropdownItem}
                 key={option.title}
               >
