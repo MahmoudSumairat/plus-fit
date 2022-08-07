@@ -5,10 +5,19 @@ import styles from "./storeProducts.module.scss";
 
 const { storeProductsContainer, storeProduct } = styles;
 
-const StoreProducts = () => {
+const productsByCategory = {
+  shoes: products,
+  shorts: products,
+  shirts: products,
+  hijabs: products,
+  accessories: products,
+  store: products,
+};
+
+const StoreProducts = ({ category = "store" }) => {
   return (
     <div className={storeProductsContainer}>
-      {products.map((product) => {
+      {productsByCategory[category].map((product) => {
         return <Product className={storeProduct} product={product} />;
       })}
     </div>

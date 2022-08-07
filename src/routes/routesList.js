@@ -1,12 +1,7 @@
-import Accessories from "../pages/Accessories/Accessories";
 import Bag from "../pages/Bag/Bag";
-import Hijabs from "../pages/Hijabs/Hijabs";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Shirts from "../pages/Shirts/Shirts";
-import Shoes from "../pages/Shoes/Shoes";
-import Shorts from "../pages/Shorts/Shorts";
 import Store from "../pages/Store/Store";
 
 const routesList = [
@@ -21,31 +16,32 @@ const routesList = [
     name: "store",
     link: "/store",
     component: Store,
+    mainStorePage: true,
   },
   {
     name: "shoes",
     link: "/shoes",
-    component: Shoes,
+    component: Store,
   },
   {
     name: "shorts",
     link: "/shorts",
-    component: Shorts,
+    component: Store,
   },
   {
     name: "shirts",
     link: "/shirts",
-    component: Shirts,
+    component: Store,
   },
   {
     name: "hijabs",
     link: "/hijabs",
-    component: Hijabs,
+    component: Store,
   },
   {
     name: "accessories",
     link: "/accessories",
-    component: Accessories,
+    component: Store,
   },
   {
     name: "register",

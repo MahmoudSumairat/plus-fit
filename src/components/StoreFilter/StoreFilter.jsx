@@ -10,7 +10,7 @@ import styles from "./storeFilter.module.scss";
 
 const { storeFilter, storeSelect } = styles;
 
-const StoreFilter = ({ filterChange = () => {} }) => {
+const StoreFilter = ({ filterChange = () => {}, categorySelected = false }) => {
   const [filters, setFilters] = useState({});
 
   const onFilterChange = (value, name) => {
@@ -30,14 +30,16 @@ const StoreFilter = ({ filterChange = () => {} }) => {
         defaultValue={filters.color}
         className={storeSelect}
       />
-      <Select
-        onChange={(value) => onFilterChange(value, "category")}
-        items={categories}
-        placeholder="all"
-        label="Category"
-        defaultValue={filters.categories}
-        className={storeSelect}
-      />
+      {!categorySelected && (
+        <Select
+          onChange={(value) => onFilterChange(value, "category")}
+          items={categories}
+          placeholder="all"
+          label="Category"
+          defaultValue={filters.categories}
+          className={storeSelect}
+        />
+      )}
       <Select
         onChange={(value) => onFilterChange(value, "brand")}
         items={brands}
