@@ -1,0 +1,22 @@
+.relatedProductsContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.relatedProductsList {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+}
+
+.relatedProduct {
+  width: 24%;
+  margin: 1rem 0.5%;
+}
+
+.relatedProductsTitle {
+  font-size: 2.2rem;
+  text-align: center;
+  font-weight: 500;
+}

@@ -8,7 +8,7 @@ const {
   noReviewsDescription,
   noReviewsButton,
 } = styles;
-const NoReviews = () => {
+const NoReviews = ({ onCreateClick }) => {
   return (
     <div className={noReviewsContainer}>
       <h4 className={noReviewsTitle}>there are no current reviews</h4>
@@ -16,7 +16,9 @@ const NoReviews = () => {
         no users submitted their reviews for this product yet, be the first one
         who adds it
       </p>
-      <Button className={noReviewsButton}>Add your review</Button>
+      <Button onClick={onCreateClick} className={noReviewsButton}>
+        Add your review
+      </Button>
     </div>
   );
 };

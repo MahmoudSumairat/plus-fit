@@ -1,0 +1,37 @@
+@import "../../styles/variables";
+
+.rateProductContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.rateProductLabel {
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
+}
+
+.starItem {
+  cursor: pointer;
+  margin-right: 0.4rem;
+  svg {
+    path {
+      fill: rgba($primary, 0.2);
+      transition: all 0.1s ease-in-out;
+    }
+  }
+}
+
+.selectedStarItem {
+  svg {
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.rateProductValue {
+  font-size: 1.6rem;
+  margin-left: 0.5rem;
+  font-weight: 600;
+}

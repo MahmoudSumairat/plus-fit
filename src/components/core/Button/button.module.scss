@@ -10,6 +10,7 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
   font-size: 1.7rem;
+  border: 1px solid $primary;
 
   &:disabled {
     opacity: 0.5;

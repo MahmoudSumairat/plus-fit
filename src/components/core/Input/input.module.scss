@@ -1,42 +1,42 @@
 @import "../../../styles/variables";
 
 .inputContainer {
-    display: flex;
-    flex-direction: column;
-    margin : 1.5rem 0;
-    position: relative;
-}   
+  display: flex;
+  flex-direction: column;
+  margin: 1.5rem 0;
+  position: relative;
+}
 
 .input {
-    padding : 1rem 1.5rem;
-    background-color: transparent;
-    border : 1px solid $primary;
-    text-transform: lowercase;
+  padding: 1rem 1.5rem;
+  background-color: transparent;
+  border: 1px solid $primary;
+  text-transform: lowercase;
+  resize: none;
 
-    &::placeholder {
-        font-size: 1.2rem;
-        text-transform: uppercase;
-    }
+  &::placeholder {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 500;
+  }
 
- 
-    &.modifiedInput {
-        border-top : 0;
-        border-right : 0;
-    }
-
+  &.modifiedInput {
+    border-top: 0;
+    border-right: 0;
+  }
 }
 
 .inputLabel {
-    font-size: 1.6rem;
-    margin-bottom: 1rem;
-    font-weight: 300;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  font-weight: 500;
 }
 
 .inputErrorMsg {
-    position: absolute;
-    color  :$danger;
-    bottom : 0;
-    // transform: translateY(130%);
-    margin-bottom: -2rem;
-    font-size: 1rem;
+  position: absolute;
+  color: $danger;
+  bottom: 0;
+  // transform: translateY(130%);
+  margin-bottom: -2rem;
+  font-size: 1rem;
 }

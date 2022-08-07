@@ -25,6 +25,7 @@ const Input = ({
   styleType = "standard",
   error = "",
   required,
+  multiLine = false,
   ...props
 }) => {
   const hasErrorClass = !!error ? inputError : "";
@@ -35,11 +36,20 @@ const Input = ({
         {label}
         {required && "*"}
       </label>
-      <input
-        className={`${input} ${inputStyleTypes[styleType]} `}
-        id={id}
-        {...props}
-      />
+      {multiLine ? (
+        <textarea
+          rows={10}
+          className={`${input} ${inputStyleTypes[styleType]} `}
+          id={id}
+          {...props}
+        ></textarea>
+      ) : (
+        <input
+          className={`${input} ${inputStyleTypes[styleType]} `}
+          id={id}
+          {...props}
+        />
+      )}
       <Animate animationType="fadeTopBottom" showsIn={!!error}>
         <span className={inputErrorMsg}>{error}</span>
       </Animate>
