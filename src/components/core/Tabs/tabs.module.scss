@@ -1,0 +1,49 @@
+@import "../../../styles/variables";
+
+.tabsContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+}
+
+.tabsHeader {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid rgba($primary, 0.3);
+  padding-bottom: 1rem;
+}
+
+.tabItem {
+  font-size: 1.7rem;
+  font-weight: 500;
+  min-width: 19rem;
+  border-right: 1px solid $primary;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0 2rem;
+
+  &::before {
+    content: "";
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    display: block;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &.activeTab {
+    &::before {
+      border-color: $primary;
+    }
+  }
+}
+
+.tabContent {
+  border: 1px solid $primary;
+  margin-top: 2rem;
+  padding: 2rem;
+  min-height: 38rem;
+}

@@ -8,6 +8,21 @@ import detailsImg from "./images/details.jpg";
 const storeProducts = [
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -82,6 +97,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -155,6 +185,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -227,6 +272,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -299,6 +359,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -371,6 +446,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -443,6 +533,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -515,6 +620,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -587,6 +707,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -659,6 +794,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -731,6 +881,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -803,6 +968,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -875,6 +1055,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -947,6 +1142,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1019,6 +1229,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1091,6 +1316,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1163,6 +1403,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1235,6 +1490,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1307,6 +1577,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1379,6 +1664,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1451,6 +1751,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1523,6 +1838,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1595,6 +1925,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1667,6 +2012,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1739,6 +2099,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1811,6 +2186,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1883,6 +2273,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -1955,6 +2360,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2027,6 +2447,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2099,6 +2534,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2171,6 +2621,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2243,6 +2708,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2315,6 +2795,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2387,6 +2882,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2459,6 +2969,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2531,6 +3056,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2603,6 +3143,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2675,6 +3230,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2747,6 +3317,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",
@@ -2819,6 +3404,21 @@ const storeProducts = [
   },
   {
     title: "Sweet Tight Pants",
+    reviews: [
+      {
+        username: "Mahmoud Bassam",
+        rate: 3,
+        content: "Greate product, really happy to wear it",
+      },
+    ],
+    shipment: { country: "germany" },
+    specs: [
+      { title: "brand", value: "adidas" },
+      { title: "made in", value: "germany" },
+      { title: "manufacture", value: "cotton" },
+      { title: "other", value: "sweat resist" },
+    ],
+    overview: ["regular fit", "soft touch fabric", "100% cotton"],
     availableColors: [
       {
         title: "red",

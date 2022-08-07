@@ -9,6 +9,7 @@ const Animate = ({
   timeout = 200,
   animationType,
   children,
+  switchTransition = false,
 }) => {
   return (
     <CSSTransition
@@ -18,6 +19,11 @@ const Animate = ({
       in={showsIn}
       unmountOnExit
       classNames={animationTypes[animationType]}
+      addEndListener={(node, done) => {
+        return switchTransition
+          ? node.addEventListener("transitionend", done, false)
+          : null;
+      }}
     >
       {children}
     </CSSTransition>
