@@ -1,0 +1,48 @@
+@import "../../../styles/variables";
+
+.addToWishListContainer {
+  display: inline-flex;
+  align-items: center;
+  margin: 2rem 0;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  padding: 0;
+  svg {
+    height: 3rem;
+    width: 3rem;
+    transition: all 0.2s ease-in-out;
+
+    path {
+      transition: all 0.2s ease-in-out;
+    }
+  }
+
+  &.wishlistAdded {
+    svg {
+      path {
+        stroke: $danger;
+        fill: $danger;
+      }
+    }
+  }
+
+  &:hover {
+    .addToWishListText {
+      font-weight: 600;
+    }
+  }
+
+  &:active {
+    svg {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.addToWishListText {
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin-left: 1rem;
+  transition: all 0.1s ease-in-out;
+}

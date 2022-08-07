@@ -1,0 +1,44 @@
+@import "../../../styles/mixins";
+@import "../../../styles/variables";
+
+.productColor {
+  display: flex;
+  flex-direction: column;
+  margin: 2rem 0;
+  margin-left: -0.5rem;
+}
+
+.productColorsContainer {
+  display: flex;
+  align-items: center;
+  margin-left: -0.3rem;
+}
+
+.productColorTitle {
+  font-size: 1.7rem;
+  font-weight: 500;
+  margin: 1rem 0.5rem;
+}
+
+.colorItem {
+  height: 3.5rem;
+  width: 3.5rem;
+  margin: 0 1rem;
+  position: relative;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    height: 130%;
+    width: 130%;
+    @include absolute-center();
+    border: 1px solid transparent;
+    transition: all 0.1s ease-in-out;
+  }
+
+  &.activeColor {
+    &::before {
+      border-color: $primary;
+    }
+  }
+}

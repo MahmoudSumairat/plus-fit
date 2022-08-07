@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+
+.productNamePriceContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.productName {
+  font-weight: 600;
+  font-size: 2.7rem;
+  margin-top: 0;
+}
+
+.productOldPrice {
+  font-size: 1.9rem;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    right: 0px;
+    top: 45%;
+    transform: translateY(-50%);
+    border-bottom: 2px solid $primary;
+  }
+}
+
+.productNewPrice,
+.productPrice {
+  font-size: 2.6rem;
+  font-weight: 600;
+  margin-top: 1rem;
+  color: $primary;
+}
+
+.productNewPrice {
+  color: $danger;
+  margin-left: 2rem;
+}

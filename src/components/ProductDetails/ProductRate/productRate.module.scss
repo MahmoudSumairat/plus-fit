@@ -1,0 +1,22 @@
+@import "../../../styles/variables";
+
+.starsContainer {
+  margin: 2rem 0;
+  display: flex;
+  align-items: center;
+  svg {
+    height: 2.5rem;
+    width: 2.5rem;
+    margin-right: 1rem;
+    path {
+      fill: $primary;
+    }
+  }
+}
+
+.rateText {
+  font-size: 2rem;
+  color: rgba($primary, 0.4);
+  font-weight: 500;
+  margin-top: 0.5rem;
+}

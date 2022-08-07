@@ -2,6 +2,8 @@ import React from "react";
 import Button from "../core/Button/Button";
 import styles from "./product.module.scss";
 import { StarFill } from "../../svg";
+import { useNavigate } from "react-router";
+import calculatePrice from "../../helpers/calculatePrice";
 
 const {
   productBox,
@@ -16,14 +18,7 @@ const {
 
 const Product = ({ product, className = "" }) => {
   const { imgUrl, title, price, sale, rate } = product;
-
-  const calculatePrice = (originalPrice) => {
-    if (!sale || originalPrice) {
-      return price.toFixed(2);
-    }
-
-    return (price - (sale * price) / 100).toFixed(2);
-  };
+  const navigate = useNavigate();
 
   const getRatingStars = () => {
     const counterArr = [];
@@ -36,18 +31,26 @@ const Product = ({ product, className = "" }) => {
     });
   };
 
+  const onProductClick = () => {
+    navigate(`/products/${product.id}`);
+  };
+
   return (
-    <div className={`${productBox} ${className} `}>
+    <div onClick={onProductClick} className={`${productBox} ${className} `}>
       <img alt={title} src={imgUrl} className={productImage} />
       <div className={productInfo}>
         <h6 className={productTitle}>{title}</h6>
         <span className={sale ? productOldPrice : productNewPrice}>
-          ${calculatePrice(true)}
+          ${calculatePrice(true, sale, price)}
         </span>
         <span className={productRating}>
           {getRatingStars()} <span>{rate}</span>{" "}
         </span>
-        {!!sale && <span className={productNewPrice}>${calculatePrice()}</span>}
+        {!!sale && (
+          <span className={productNewPrice}>
+            ${calculatePrice(false, sale, price)}
+          </span>
+        )}
       </div>
       <Button className={productButton}>add to bag</Button>
     </div>

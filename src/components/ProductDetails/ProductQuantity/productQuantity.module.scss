@@ -1,0 +1,85 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.quantityContainer {
+  display: flex;
+  align-items: center;
+}
+
+.productQuantityContainer {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.quantityValue,
+.decrease,
+.increase {
+  width: 4rem;
+  height: 4rem;
+  border: 0;
+  background: none;
+}
+
+.quantityValue {
+  font-size: 2rem;
+  //   padding-left: 1rem;
+  margin: 0 2rem;
+  -moz-appearance: textfield;
+  text-align: center;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+
+.decrease,
+.increase {
+  border: 1px solid $primary;
+  @include flex-center();
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+
+  &:disabled {
+    opacity: 0.5;
+    border-color: rgba($primary, 0.5);
+    cursor: default;
+  }
+
+  svg {
+    height: 1.5rem;
+    width: 1.5rem;
+  }
+}
+
+.increase {
+  svg {
+    transform: rotateZ(180deg);
+  }
+}
+
+.quantityTitle {
+  margin-bottom: 1rem;
+  font-size: 1.7rem;
+  font-weight: 500;
+  display: block;
+  width: 100%;
+}
+
+.quantityControl {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.stockLabel {
+  font-size: 1.4rem;
+  color: rgba($primary, 0.5);
+  font-weight: 500;
+
+  &.outOfStock {
+    color: rgba($danger, 0.5);
+  }
+}
