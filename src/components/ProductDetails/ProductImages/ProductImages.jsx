@@ -40,6 +40,7 @@ const ProductImages = ({ product: { productImages, name } }) => {
             image === productImages[mainImageUrlIndex] ? activeImage : "";
           return (
             <li
+              key={index}
               onClick={() => setMainImgUrlIndex(index)}
               className={`${imageItem} ${activeImageClass} `}
             >

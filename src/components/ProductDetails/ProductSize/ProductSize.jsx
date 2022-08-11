@@ -22,6 +22,7 @@ const ProductSize = ({
           const activeSizeClass = activeSizeIndex === index ? activeSize : "";
           return (
             <span
+              key={size}
               className={`${productSizeItem} ${activeSizeClass}`}
               onClick={() => onSizeClick(size, index)}
             >

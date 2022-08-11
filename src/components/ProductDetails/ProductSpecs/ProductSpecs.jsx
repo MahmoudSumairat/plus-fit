@@ -19,7 +19,7 @@ const ProductSpecs = ({ product: { specs, shipment } }) => {
       <ul className={specsInfo}>
         {specs.map((spec) => {
           return (
-            <li className={specsInfoItem}>
+            <li key={spec.value} className={specsInfoItem}>
               <span className={specsInfoTitle}>{spec.title}:</span>
               <span className={specsInfoValue}> {spec.value} </span>
             </li>

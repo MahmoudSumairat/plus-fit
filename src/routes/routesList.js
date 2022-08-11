@@ -2,7 +2,6 @@ import Bag from "../pages/Bag/Bag";
 import Home from "../pages/Home/Home";
 import Login from "../pages/Login/Login";
 import ProductById from "../pages/ProductDetails/ProductById";
-import ProductDetails from "../pages/ProductDetails/ProductById";
 import Register from "../pages/Register/Register";
 import Store from "../pages/Store/Store";
 
@@ -26,13 +25,13 @@ const routesList = [
     component: Store,
   },
   {
-    name: "shorts",
-    link: "/shorts",
+    name: "lowers",
+    link: "/lowers",
     component: Store,
   },
   {
-    name: "shirts",
-    link: "/shirts",
+    name: "uppers",
+    link: "/uppers",
     component: Store,
   },
   {

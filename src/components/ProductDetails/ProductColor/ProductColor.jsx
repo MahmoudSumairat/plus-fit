@@ -30,6 +30,7 @@ const ProductColor = ({
               onClick={() => onColorClick(color, index)}
               className={`${colorItem} ${activeClass} `}
               style={{ backgroundColor: color.hex }}
+              key={color.hex}
             ></span>
           );
         })}

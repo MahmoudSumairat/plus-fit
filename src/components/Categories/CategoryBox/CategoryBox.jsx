@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Button from "../../core/Button/Button";
 import styles from "./categoryBox.module.scss";
 
@@ -24,9 +25,11 @@ const CategoryBox = ({ category, index }) => {
         src={category.imageUrl}
         alt={category.title}
       />
-      <Button className={categoryButton} buttonType="borderLight">
-        shop now
-      </Button>
+      <Link to={category.key}>
+        <Button className={categoryButton} buttonType="borderLight">
+          shop now
+        </Button>
+      </Link>
     </div>
   );
 };

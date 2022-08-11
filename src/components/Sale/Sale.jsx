@@ -3,6 +3,7 @@ import styles from "./sale.module.scss";
 import saleImg from "../../data/sale/images/sale.jpg";
 import { getSaleValue, getSaleStylesCount } from "../../API/endpoints/sale";
 import Button from "../core/Button/Button";
+import { Link } from "react-router-dom";
 const {
   saleSection,
   saleImage,
@@ -39,7 +40,9 @@ const Sale = () => {
         <p className={saleDescription}>
           refill your energy with a massive collection of brand new styles
         </p>
-        <Button buttonType="borderDark">shop now</Button>
+        <Link to={`/store?sale=${saleValue}`}>
+          <Button buttonType="borderDark">shop now</Button>
+        </Link>
       </div>
     </section>
   );

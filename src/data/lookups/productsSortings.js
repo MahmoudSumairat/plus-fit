@@ -1,19 +1,19 @@
 const productsSortings = [
   {
     title: "recommended",
-    id: 1,
+    id: "recommended",
   },
   {
     title: "trending",
-    id: 2,
+    id: "trending",
   },
   {
     title: "just arrived",
-    id: 3,
+    id: "just-arrived",
   },
   {
     title: "best sellers",
-    id: 4,
+    id: "best-sellers",
   },
 ];
 

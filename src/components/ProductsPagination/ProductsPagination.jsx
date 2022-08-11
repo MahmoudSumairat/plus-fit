@@ -22,6 +22,7 @@ const ProductsPagination = ({
       {pagesArr.map((pageIndex) => {
         return (
           <span
+            key={pageIndex}
             className={`${productsPage} ${
               currentPageIndex === pageIndex + 1 ? activePage : ""
             } `}

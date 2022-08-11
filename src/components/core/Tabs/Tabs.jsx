@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { CSSTransition, SwitchTransition } from "react-transition-group";
-import Animate from "../Animate/Animate";
 import styles from "./tabs.module.scss";
 import animationTypes from "../Animate/animationTypes";
 const { tabsContainer, tabsHeader, tabContent, tabItem, activeTab } = styles;
@@ -16,6 +15,7 @@ const Tabs = ({ tabs }) => {
           const activeTabClass = activeTabIndex === index ? activeTab : "";
           return (
             <span
+              key={tab.title}
               onClick={() => {
                 setAnimationState(!animationState);
                 setActiveTabIndex(index);

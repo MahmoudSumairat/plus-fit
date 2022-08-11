@@ -10,8 +10,8 @@ const ReviewsItem = ({ review }) => {
     <div className={reviewsItem}>
       <span className={reviewUser}>{review.username}</span>
       <span className={reviewRate}>
-        {getCounterArr(review.rate).map(() => {
-          return <StarFill />;
+        {getCounterArr(review.rate).map((item) => {
+          return <StarFill key={item} />;
         })}
         <span>{review.rate}</span>
       </span>

@@ -3,6 +3,7 @@ import { getBestSellerProducts } from "../../API/endpoints/bestSellers";
 import Product from "../Product/Product";
 import Button from "../core/Button/Button";
 import styles from "./bestSellers.module.scss";
+import { Link } from "react-router-dom";
 const {
   bestSellersTitle,
   bestSellersProduct,
@@ -33,7 +34,9 @@ const BestSellers = () => {
         })}
       </div>
       <div className={bestSellersExplore}>
-        <Button buttonType="borderDark">explore more</Button>
+        <Link to="/store?sortBy=best-sellers">
+          <Button buttonType="borderDark">explore more</Button>
+        </Link>
       </div>
     </section>
   );

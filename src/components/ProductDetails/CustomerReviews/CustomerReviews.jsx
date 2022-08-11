@@ -29,7 +29,7 @@ const CustomerReviews = ({ product: { reviews } }) => {
           </div>
           <ul className={reviewsList}>
             {reviews.map((review) => {
-              return <ReviewsItem review={review} />;
+              return <ReviewsItem key={review.content} review={review} />;
             })}
           </ul>
         </>

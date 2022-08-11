@@ -72,6 +72,7 @@ const RegisterForm = () => {
           {formFields.map((field) => {
             return (
               <Input
+                key={field.name}
                 className={authInput}
                 onChange={(e) => handleInputChange(e, field)}
                 error={errors[field.name].message}

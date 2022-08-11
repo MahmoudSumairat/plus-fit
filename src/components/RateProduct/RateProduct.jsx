@@ -32,6 +32,7 @@ const RateProduct = ({ onChange }) => {
             index < selectedStarValue ? selectedStarItem : "";
           return (
             <span
+              key={index}
               onClick={() => onStarClick(index + 1)}
               onMouseEnter={() => setSelectedStarValue(index + 1)}
               className={`${starItem} ${selectedStarClass} `}

@@ -7,7 +7,11 @@ const ProductOverview = ({ product: { overview } }) => {
   return (
     <ul className={productOverview}>
       {overview.map((item) => {
-        return <li className={productOverviewItem}>{item}</li>;
+        return (
+          <li key={item} className={productOverviewItem}>
+            {item}
+          </li>
+        );
       })}
     </ul>
   );

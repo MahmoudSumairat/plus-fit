@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { getCategoriesForLandingPage } from "../../API/endpoints/categories";
 import Button from "../core/Button/Button";
 import styles from "./categories.module.scss";
@@ -21,7 +22,9 @@ const Categories = () => {
         })}
       </div>
       <div className={categoriesExplore}>
-        <Button buttonType="borderDark">EXPLORE MORE</Button>
+        <Link to="/store">
+          <Button buttonType="borderDark">EXPLORE MORE</Button>
+        </Link>
       </div>
     </section>
   );

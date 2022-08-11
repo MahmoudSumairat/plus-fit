@@ -8,6 +8,8 @@
 
 .dropdownList {
   border: 1px solid $primary;
+  z-index: 999;
+  position: relative;
 }
 
 .dropdownItem {

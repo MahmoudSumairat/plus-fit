@@ -17,8 +17,8 @@ const ProductRate = ({ product: { rate = 0 } }) => {
 
   return (
     <div className={starsContainer}>
-      {getRateCountingArray().map(() => {
-        return <StarFill />;
+      {getRateCountingArray().map((item) => {
+        return <StarFill key={item} />;
       })}
 
       <span className={rateText}>{rate}</span>

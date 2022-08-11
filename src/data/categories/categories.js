@@ -6,14 +6,14 @@ import accs from "./images/accs.jpg";
 const categories = [
   {
     id: 1,
-    key: "upper_wear",
+    key: "uppers",
     showInLandingPage: true,
     title: "Upper Wears",
     imageUrl: upperWear,
   },
   {
     id: 2,
-    key: "lower_wear",
+    key: "lowers",
     showInLandingPage: true,
     title: "Lower Wears",
     imageUrl: lowerWear,
@@ -29,7 +29,7 @@ const categories = [
     id: 4,
     key: "accessories",
     showInLandingPage: true,
-    title: "Accs",
+    title: "accs",
     imageUrl: accs,
   },
 ];
