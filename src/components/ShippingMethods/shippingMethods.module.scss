@@ -1,0 +1,35 @@
+@import "/src/styles/variables";
+
+.shippingMethodsContainer {
+  padding: 2rem;
+  border: 1px solid $primary;
+  margin-top: 2;
+  display: flex;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.shippingMethod {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.methodCarrier,
+.methodEstimate {
+  font-size: 1.7rem;
+  text-align: center;
+  font-weight: 600;
+  width: 20%;
+}
+
+.methodEstimate {
+  font-size: 1.6rem;
+}
+
+.shippingMethodsTitle {
+  margin-top: 0;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
