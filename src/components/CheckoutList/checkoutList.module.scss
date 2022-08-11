@@ -1,0 +1,20 @@
+@import "/src/styles/variables";
+
+.checkoutTotal {
+  display: flex;
+  padding: 2rem;
+  border: 1px solid $primary;
+  justify-content: flex-end;
+}
+
+.checkoutTotalData {
+  width: 20%;
+  display: flex;
+}
+
+.checkoutInfo {
+  width: 50%;
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 600;
+}

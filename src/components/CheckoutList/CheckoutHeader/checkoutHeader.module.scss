@@ -1,0 +1,27 @@
+.checkoutHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem;
+}
+
+.checkoutTitle {
+  width: 70%;
+  font-size: 2.4rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.checkoutInfoContainer {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkoutInfo {
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 33.33%;
+  text-align: center;
+}

@@ -1,0 +1,30 @@
+@import "/src/styles/variables";
+
+.billingAddress {
+  padding: 2rem;
+  border: 1px solid $primary;
+  margin-top: 2rem;
+}
+
+.billingAddressForm {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.formField {
+  width: 48%;
+  margin: 1rem 1%;
+
+  button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.billingAddressTitle {
+  font-size: 1.8rem;
+  padding-left: 1rem;
+  font-weight: 500;
+  margin-top: 0;
+}

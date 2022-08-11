@@ -4,6 +4,7 @@ import Login from "../pages/Login/Login";
 import ProductById from "../pages/ProductDetails/ProductById";
 import Register from "../pages/Register/Register";
 import Store from "../pages/Store/Store";
+import Checkout from "../pages/Checkout/Checkout";
 
 const routesList = [
   {
@@ -70,6 +71,12 @@ const routesList = [
     name: "product details",
     link: "/products/:productId",
     component: ProductById,
+    hideFromMenu: true,
+  },
+  {
+    name: "checkout",
+    link: "/checkout",
+    component: Checkout,
     hideFromMenu: true,
   },
 ];

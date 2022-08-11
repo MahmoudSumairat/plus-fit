@@ -1,0 +1,53 @@
+@import "/src/styles/variables";
+
+.checkoutItem {
+  display: flex;
+  border: 1px solid $primary;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.itemInfoContainer {
+  display: flex;
+}
+
+.itemImgContainer {
+  height: 10rem;
+  width: 10rem;
+  margin-right: 2rem;
+}
+
+.itemImg {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border: 1px solid $primary;
+}
+
+.itemInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemTitle {
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.itemSelectedOption {
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 33.33%;
+  text-align: center;
+}
+
+.itemTotals {
+  display: flex;
+  width: 30%;
+  justify-content: space-between;
+}
