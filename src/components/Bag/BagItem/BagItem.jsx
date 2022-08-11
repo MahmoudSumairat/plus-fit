@@ -17,7 +17,7 @@ const {
   removeProduct,
 } = styles;
 
-const BagItem = ({ item }) => {
+const BagItem = ({ item, removeBagItem }) => {
   return (
     <li className={bagItem}>
       <div className={bagItemImgContainer}>
@@ -49,7 +49,7 @@ const BagItem = ({ item }) => {
         </div>
       </div>
 
-      <span className={removeProduct}>
+      <span onClick={() => removeBagItem(item.id)} className={removeProduct}>
         <Clear />
       </span>
     </li>

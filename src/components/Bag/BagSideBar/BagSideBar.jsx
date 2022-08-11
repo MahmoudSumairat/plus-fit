@@ -1,8 +1,6 @@
 import React from "react";
 import bagItems from "../../../data/bag/bagItems";
-import deliveryReturns, {
-  deliveryFees,
-} from "../../../data/bag/deliveryReturns";
+import deliveryReturns from "../../../data/bag/deliveryReturns";
 import Button from "../../core/Button/Button";
 import styles from "./bagSideBar.module.scss";
 
@@ -16,15 +14,35 @@ const {
   bagSidebarDeliveryReturns,
   bagSidebarDeliveryPrice,
   checkoutButton,
+  discountPrice,
+  totalPrice,
 } = styles;
 
 const BagSidebar = () => {
   const calculateSubtotal = () => {
-    let total = bagItems
+    let subTotal = bagItems
       .map((item) => item.price)
       .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
 
+    return subTotal;
+  };
+
+  const calculateTotal = () => {
+    let total = bagItems
+      .map((item) =>
+        item.sale ? item.price - item.price * (item.sale / 100) : item.price
+      )
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+
     return total;
+  };
+
+  const calculateDiscounts = () => {
+    let discounts = bagItems
+      .map((item) => (item.sale ? item.price * (item.sale / 100) : 0))
+      .reduce((previousValue, currentValue) => previousValue + currentValue, 0);
+
+    return discounts;
   };
 
   return (
@@ -47,19 +65,19 @@ const BagSidebar = () => {
         <div className={bagSidebarPriceData}>
           <span className={bagSidebarDataTitle}>subtotal</span>
           <span className={bagSidebarDataValue}>
-            ${calculateSubtotal().toFixed(2)}{" "}
+            ${calculateSubtotal().toFixed(2)}
           </span>
         </div>
         <div className={bagSidebarPriceData}>
-          <span className={bagSidebarDataTitle}>delivery fees</span>
-          <span className={bagSidebarDataValue}>
-            ${deliveryFees.toFixed(2)}{" "}
+          <span className={bagSidebarDataTitle}>total discounts</span>
+          <span className={`${bagSidebarDataValue}  ${discountPrice} `}>
+            - ${calculateDiscounts().toFixed(2)}
           </span>
         </div>
         <div className={bagSidebarPriceData}>
           <span className={bagSidebarDataTitle}>total</span>
-          <span className={bagSidebarDataValue}>
-            ${(calculateSubtotal() + deliveryFees).toFixed(2)}
+          <span className={`${bagSidebarDataValue} ${totalPrice} `}>
+            ${calculateTotal().toFixed(2)}
           </span>
         </div>
         <Button className={checkoutButton}>proceed to checkout</Button>
