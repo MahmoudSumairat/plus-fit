@@ -1,0 +1,88 @@
+@import "../../../styles/variables";
+
+.bagItem {
+  padding: 2rem;
+  border: 1px solid $primary;
+  display: flex;
+  margin-bottom: 2rem;
+  align-items: center;
+  position: relative;
+}
+
+.bagItemImgContainer {
+  width: 13rem;
+  height: 13rem;
+}
+
+.bagItemImg {
+  height: 100%;
+  width: 100%;
+  border: 1px solid $primary;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 2rem;
+  height: 13rem;
+}
+
+.productOptionsContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: flex-end;
+}
+
+.productOptions {
+  display: flex;
+  align-items: center;
+}
+
+.bagItemQuantity {
+  width: auto;
+  margin: 0;
+
+  button {
+    height: 3.2rem;
+    width: 3.2rem;
+  }
+}
+
+.bagItemOptionsSelect {
+  margin-left: 2rem;
+  button {
+    padding: 0.5rem 1rem !important;
+  }
+}
+
+.productTitle {
+  font-weight: 500;
+  font-size: 2.3rem;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.removeProduct {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  cursor: pointer;
+
+  &:hover {
+    svg path {
+      stroke: $danger;
+    }
+  }
+
+  svg {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+}

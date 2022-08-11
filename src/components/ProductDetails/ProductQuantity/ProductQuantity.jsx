@@ -18,6 +18,8 @@ const ProductQuantity = ({
   defaultQuantity = 1,
   maxQuantity = 100,
   onChange = () => {},
+  withStockInfo = true,
+  className = "",
 }) => {
   const [quantity, setQuantity] = useState(defaultQuantity);
   const minValue = 1;
@@ -46,7 +48,7 @@ const ProductQuantity = ({
   const stockTitle = !maxQuantity ? "out of stock" : "in stock";
 
   return (
-    <div className={productQuantityContainer}>
+    <div className={`${productQuantityContainer}  ${className} `}>
       <span className={quantityTitle}>Quantity:</span>
       <div className={quantityControl}>
         <div className={quantityContainer}>
@@ -71,9 +73,11 @@ const ProductQuantity = ({
             <ChevronDown />
           </button>
         </div>
-        <span className={`${stockLabel} ${outOfStockClass} `}>
-          {stockTitle}
-        </span>
+        {withStockInfo && (
+          <span className={`${stockLabel} ${outOfStockClass} `}>
+            {stockTitle}
+          </span>
+        )}
       </div>
     </div>
   );

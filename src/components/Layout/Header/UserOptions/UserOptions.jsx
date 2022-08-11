@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { User, Bag } from "../../../../svg";
 import Dropdown from "../../../core/Dropdown/Dropdown";
 import styles from "./userOptions.module.scss";
@@ -50,7 +50,9 @@ const UserOptions = () => {
         />
       </div>
       <div className={bag}>
-        <Bag />
+        <Link to="/bag">
+          <Bag />
+        </Link>
       </div>
     </div>
   );

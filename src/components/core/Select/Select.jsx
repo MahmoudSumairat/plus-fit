@@ -40,7 +40,7 @@ const Select = ({
 
   return (
     <div className={`${selectContainer} ${className} `}>
-      <label className={selectLabel}>{label}</label>
+      <label className={selectLabel}>{label}:</label>
       <Button
         className={`${selectButton} ${showDropdown ? opened : ""} `}
         onClick={() => setShowDropdown(!showDropdown)}

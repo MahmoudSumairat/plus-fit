@@ -1,0 +1,53 @@
+@import "../.../../../../styles/variables";
+
+.bagSidebar {
+  padding: 2rem;
+  border: 1px solid $primary;
+  height: 73.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 2rem;
+}
+
+.bagSidebarTitle {
+  font-size: 2rem;
+  font-weight: 500;
+  margin: 0;
+  text-align: center;
+}
+
+.bagSidebarDeliveryReturns {
+  display: flex;
+  flex-direction: column;
+}
+
+.bagSidebarDeliveryData {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.bagSidebarDataTitle,
+.bagSidebarDataValue {
+  font-size: 1.7rem;
+}
+
+.bagSidebarDataTitle {
+  font-weight: 700;
+}
+
+.bagSidebarDataValue {
+  font-weight: 500;
+}
+
+.bagSidebarPriceData {
+  display: flex;
+  margin: 1rem 0;
+  justify-content: space-between;
+}
+
+.checkoutButton {
+  width: 100%;
+  margin-top: 2rem;
+}
