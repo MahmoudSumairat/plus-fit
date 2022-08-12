@@ -5,10 +5,10 @@ import Dropdown from "../../../core/Dropdown/Dropdown";
 import styles from "./userOptions.module.scss";
 import { Heart, Logout } from "../../../../svg";
 import useIsAuthenticated from "../../../../hooks/useIsAuthenticated";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../../../redux/actionCreators/auth";
 
-const { userOptions, user, bag, userOptionsDropdown } = styles;
+const { userOptions, user, bag, userOptionsDropdown, bagCount } = styles;
 
 const UserOptions = () => {
   const [showDropdown, setShowDropdown] = useState(false);
@@ -16,6 +16,7 @@ const UserOptions = () => {
   const isAuthenticated = useIsAuthenticated();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const { bagItemsCount } = useSelector((state) => state.bag);
 
   const handleUserIconClick = () => {
     if (!isAuthenticated) {
@@ -50,6 +51,7 @@ const UserOptions = () => {
         />
       </div>
       <div className={bag}>
+        {!!bagItemsCount && <span className={bagCount}>{bagItemsCount}</span>}
         <Link to="/bag">
           <Bag />
         </Link>

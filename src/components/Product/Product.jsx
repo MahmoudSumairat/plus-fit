@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../core/Button/Button";
 import styles from "./product.module.scss";
 import { StarFill } from "../../svg";
 import { useNavigate } from "react-router";
 import calculatePrice from "../../helpers/calculatePrice";
+import { useDispatch } from "react-redux";
+import { addToBag } from "../../redux/actionCreators/bag";
 
 const {
   productBox,
@@ -19,6 +21,8 @@ const {
 const Product = ({ product, className = "" }) => {
   const { imgUrl, title, price, sale, rate } = product;
   const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const [addedToBag, setAddedToBag] = useState(product.addedToBag);
 
   const getRatingStars = () => {
     const counterArr = [];
@@ -33,6 +37,13 @@ const Product = ({ product, className = "" }) => {
 
   const onProductClick = () => {
     navigate(`/products/${product.id}`);
+  };
+
+  const addRemoveBag = (e) => {
+    //do api stuff
+    e.stopPropagation();
+    dispatch(addToBag());
+    setAddedToBag(true);
   };
 
   return (
@@ -52,7 +63,13 @@ const Product = ({ product, className = "" }) => {
           </span>
         )}
       </div>
-      <Button className={productButton}>add to bag</Button>
+      <Button
+        onClick={addRemoveBag}
+        buttonType={addedToBag ? "borderDark" : "normal"}
+        className={productButton}
+      >
+        {addedToBag ? "remove from bag" : "add to bag"}
+      </Button>
     </div>
   );
 };
