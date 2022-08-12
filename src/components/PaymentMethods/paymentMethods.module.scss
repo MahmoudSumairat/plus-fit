@@ -1,0 +1,21 @@
+@import "/src/styles/variables";
+
+.paymentMethodsContainer {
+  padding: 2rem;
+  border: 1px solid $primary;
+  margin-top: 2rem;
+}
+
+.paymentMethodsButtonContainer {
+  display: flex;
+  align-items: center;
+}
+.paymentMethodsTitle {
+  font-size: 1.8rem;
+  margin-top: 0;
+  font-weight: 500;
+}
+
+.paymentMethodsButton {
+  margin-right: 2rem;
+}

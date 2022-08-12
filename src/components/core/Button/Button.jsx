@@ -9,6 +9,7 @@ const {
   borderButtonLight,
   normalButton,
   buttonIcon,
+  buttonPreIcon,
 } = styles;
 
 const buttonTypes = {
@@ -25,6 +26,7 @@ const Button = forwardRef(
       withArrow,
       buttonType = "normal",
       className = "",
+      preIcon,
       ...props
     },
     ref
@@ -39,6 +41,7 @@ const Button = forwardRef(
         ref={ref}
       >
         {withArrow && <ArrowRight />}
+        {preIcon && <span className={buttonPreIcon}>{preIcon}</span>}
         {children}
         {icon && <span className={buttonIcon}>{icon}</span>}
       </button>

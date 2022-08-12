@@ -93,5 +93,13 @@
 }
 
 .buttonIcon {
-  margin-left: 10px;
+  margin-left: 1rem;
+}
+
+.buttonPreIcon {
+  margin-right: 1rem;
+
+  svg {
+    margin-left: 0;
+  }
 }
