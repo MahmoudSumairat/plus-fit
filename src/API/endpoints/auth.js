@@ -1,9 +1,10 @@
-const login = (loginData) => {
-  return Promise.resolve();
+import http from "../../http/http";
+import { loginRoute, registerRoute } from "../routes/auth";
+
+export const loginAPI = (credentials) => {
+  return http.post(loginRoute(), credentials);
 };
 
-const register = (registerData) => {
-  return Promise.resolve();
+export const registerAPI = (credentials) => {
+  return http.post(registerRoute, credentials);
 };
-
-export { login, register };
