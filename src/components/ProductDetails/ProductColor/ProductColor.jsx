@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { PRODUCT_COLORS } from "../../../constants/productColors";
 import styles from "./productColor.module.scss";
 const {
   productColor,
@@ -16,7 +17,7 @@ const ProductColor = ({
 
   const onColorClick = (value, index) => {
     setActiveColorIndex(index);
-    onColorChange(value);
+    onColorChange(value.color_id);
   };
 
   return (
@@ -29,7 +30,7 @@ const ProductColor = ({
             <span
               onClick={() => onColorClick(color, index)}
               className={`${colorItem} ${activeClass} `}
-              style={{ backgroundColor: color.hex }}
+              style={{ backgroundColor: PRODUCT_COLORS[color.title] }}
               key={color.hex}
             ></span>
           );

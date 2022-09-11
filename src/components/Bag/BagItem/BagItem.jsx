@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Select from "../../core/Select/Select";
 import ProductQuantity from "../../ProductDetails/ProductQuantity/ProductQuantity";
 import styles from "./bagItem.module.scss";
 import { Clear } from "../../../svg";
+import { getColorsAPI, getSizesAPI } from "../../../API/endpoints/lookups";
 const {
   bagItem,
   bagItemImg,
@@ -17,11 +18,11 @@ const {
   removeProduct,
 } = styles;
 
-const BagItem = ({ item, removeBagItem }) => {
+const BagItem = ({ item, removeBagItem, sizes, colors }) => {
   return (
     <li className={bagItem}>
       <div className={bagItemImgContainer}>
-        <img className={bagItemImg} src={item.productImg} alt={item.title} />
+        <img className={bagItemImg} src={item.imgUrl} alt={item.title} />
       </div>
       <div className={productInfo}>
         <h4 className={productTitle}>{item.title}</h4>
@@ -36,20 +37,23 @@ const BagItem = ({ item, removeBagItem }) => {
               label="size"
               className={bagItemOptionsSelect}
               defaultValue={item.selectedSize}
-              items={item.availableSizes}
+              items={sizes}
             />
             <Select
               label="color"
               className={bagItemOptionsSelect}
               defaultValue={item.selectedColor}
-              items={item.availableColors}
+              items={colors}
             />
           </div>
           <span className={productPrice}>${item.price.toFixed(2)}</span>
         </div>
       </div>
 
-      <span onClick={() => removeBagItem(item.id)} className={removeProduct}>
+      <span
+        onClick={() => removeBagItem(item.bagItemId)}
+        className={removeProduct}
+      >
         <Clear />
       </span>
     </li>

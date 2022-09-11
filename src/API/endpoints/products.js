@@ -13,6 +13,6 @@ export const getProductDetailsAPI = (productId) => {
   return http.get(getProductDetailsRoute(productId));
 };
 
-export const getProductsByTypeAPI = (productType) => {
-  return http.get(getProductsByType(productType));
+export const getProductsByTypeAPI = (productType, pageSize, pageNumber) => {
+  return http.get(getProductsByType(productType, pageSize, pageNumber));
 };

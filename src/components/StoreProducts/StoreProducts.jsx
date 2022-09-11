@@ -14,13 +14,13 @@ const productsByCategory = {
   store: products,
 };
 
-const StoreProducts = ({ category = "store" }) => {
+const StoreProducts = ({ category = "store", products }) => {
   return (
     <div className={storeProductsContainer}>
-      {productsByCategory[category].map((product) => {
+      {products.map((product) => {
         return (
           <Product
-            key={product.id}
+            key={product.product_id}
             className={storeProduct}
             product={product}
           />

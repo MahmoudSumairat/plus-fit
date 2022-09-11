@@ -4,6 +4,8 @@ import CreateReview from "./CreateReview/CreateReview";
 import styles from "./customerReviews.module.scss";
 import NoReviews from "./NoReviews/NoReviews";
 import ReviewsItem from "./ReviewsItem/ReviewsItem";
+import useUserData from "../../../hooks/useUserData";
+import { addReviewAPI } from "../../../API/endpoints/reviews";
 const {
   reviewsContainer,
   reviewsHeader,
@@ -12,21 +14,40 @@ const {
   addReviewButton,
 } = styles;
 
-const CustomerReviews = ({ product: { reviews } }) => {
+const CustomerReviews = ({
+  product: { reviews: productReviews, product_id },
+}) => {
   const [createMode, setCreateMode] = useState(false);
+  const [reviews, setReviews] = useState(productReviews);
+  const { user_id } = useUserData();
+
+  const isReviewsByMe = !!productReviews.find(
+    (review) => review.user_id === user_id
+  );
+
+  const onSubmit = async (data) => {
+    try {
+      await addReviewAPI({ ...data, productId: product_id });
+      setReviews([...reviews, data]);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <div className={reviewsContainer}>
       {!!reviews.length && !createMode && (
         <>
-          <div className={reviewsHeader}>
-            <Button
-              onClick={() => setCreateMode(true)}
-              className={addReviewButton}
-            >
-              add your review
-            </Button>
-          </div>
+          {!isReviewsByMe && (
+            <div className={reviewsHeader}>
+              <Button
+                onClick={() => setCreateMode(true)}
+                className={addReviewButton}
+              >
+                add your review
+              </Button>
+            </div>
+          )}
           <ul className={reviewsList}>
             {reviews.map((review) => {
               return <ReviewsItem key={review.content} review={review} />;
@@ -40,7 +61,7 @@ const CustomerReviews = ({ product: { reviews } }) => {
 
       {createMode && (
         <CreateReview
-          onSubmit={(data) => console.log(data)}
+          onSubmit={onSubmit}
           onCancel={() => setCreateMode(false)}
         />
       )}

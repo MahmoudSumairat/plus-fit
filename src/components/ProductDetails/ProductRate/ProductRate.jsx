@@ -4,11 +4,11 @@ import styles from "./productRate.module.scss";
 
 const { starsContainer, rateText } = styles;
 
-const ProductRate = ({ product: { rate = 0 } }) => {
+const ProductRate = ({ product: { rate = 0, rates_count } }) => {
   const getRateCountingArray = () => {
     const countingArr = [];
 
-    for (let i = 0; i < Math.ceil(rate); i++) {
+    for (let i = 0; i < Math.ceil(rate / rates_count); i++) {
       countingArr.push(i);
     }
 
@@ -21,7 +21,7 @@ const ProductRate = ({ product: { rate = 0 } }) => {
         return <StarFill key={item} />;
       })}
 
-      <span className={rateText}>{rate}</span>
+      <span className={rateText}>{rate / rates_count}</span>
     </div>
   );
 };

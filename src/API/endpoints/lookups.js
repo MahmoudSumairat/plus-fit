@@ -5,6 +5,7 @@ import {
   getColorsRoute,
   getCountriesRoute,
   getManufacturesRoute,
+  getSizesRoute,
   getTypesRoute,
 } from "../routes/lookup";
 
@@ -30,4 +31,8 @@ export const getManufacturesAPI = () => {
 
 export const getTypesAPI = () => {
   return http.get(getTypesRoute());
+};
+
+export const getSizesAPI = () => {
+  return http.get(getSizesRoute());
 };

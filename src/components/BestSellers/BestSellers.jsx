@@ -4,6 +4,7 @@ import Product from "../Product/Product";
 import Button from "../core/Button/Button";
 import styles from "./bestSellers.module.scss";
 import { Link } from "react-router-dom";
+import { getAllProductsAPI } from "../../API/endpoints/products";
 const {
   bestSellersTitle,
   bestSellersProduct,
@@ -16,8 +17,19 @@ const BestSellers = () => {
   const [bestSellerProducts, setBestSellerProducts] = useState([]);
 
   useEffect(() => {
-    setBestSellerProducts(getBestSellerProducts());
+    fetchProducts();
   }, []);
+
+  const fetchProducts = async () => {
+    try {
+      const {
+        data: { data },
+      } = await getAllProductsAPI(10, 1);
+      setBestSellerProducts(data);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <section className={bestSellersSection}>

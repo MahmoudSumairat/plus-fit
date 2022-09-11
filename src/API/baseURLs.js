@@ -12,3 +12,4 @@ export const COLORS = "/colors";
 export const COUNTRIES = "/countries";
 export const MANUFACTURES = "/manufactures";
 export const TYPES = "/types";
+export const SIZES = "/sizes";

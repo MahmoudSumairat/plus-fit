@@ -35,8 +35,6 @@ const Range = ({ valueFactor = 100, onChange = () => {} }) => {
       moveTarget.getBoundingClientRect();
     const value = (((targetLeft - left) / width) * valueFactor).toFixed(0);
 
-    console.log(e.x);
-
     if (
       e.x >= left + targetWidth / 2 &&
       e.x <= left + width + targetWidth / 2

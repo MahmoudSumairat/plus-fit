@@ -3,13 +3,13 @@ import styles from "./productOverview.module.scss";
 
 const { productOverview, productOverviewItem } = styles;
 
-const ProductOverview = ({ product: { overview } }) => {
+const ProductOverview = ({ product: { overviews } }) => {
   return (
     <ul className={productOverview}>
-      {overview.map((item) => {
+      {overviews.map((item) => {
         return (
-          <li key={item} className={productOverviewItem}>
-            {item}
+          <li key={item.overview_id} className={productOverviewItem}>
+            {item.content}
           </li>
         );
       })}

@@ -1,0 +1,12 @@
+@import "/src/styles/mixins";
+
+.storePage {
+  min-height: 59vh;
+}
+
+.noProducts {
+  @include absolute-center;
+  font-size: 3rem;
+  margin-top: -3rem;
+  opacity: 0.6;
+}

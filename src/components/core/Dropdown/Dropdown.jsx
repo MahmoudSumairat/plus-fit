@@ -44,7 +44,7 @@ const Dropdown = ({
     }
 
     if (option.onClick) {
-      return option.onClick;
+      return option.onClick();
     }
 
     navigate(option.linkTo, { replace: true });

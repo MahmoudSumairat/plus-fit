@@ -7,11 +7,11 @@ import styles from "./createReview.module.scss";
 const { createReviewButton, createReviewActions, createReviewTitle } = styles;
 
 const CreateReview = ({ onSubmit, onCancel }) => {
-  const [reviewData, setReviewData] = useState({ rate: 0, review: "" });
+  const [reviewData, setReviewData] = useState({ rate: 0, content: "" });
 
   const onReviewChange = ({ target: { value } }) => {
     const newReviewData = { ...reviewData };
-    newReviewData.review = value;
+    newReviewData.content = value;
     setReviewData(newReviewData);
   };
 
@@ -34,8 +34,11 @@ const CreateReview = ({ onSubmit, onCancel }) => {
       <RateProduct onChange={onReviewRateChange} />
       <div className={createReviewActions}>
         <Button
-          disabled={!reviewData.review || !reviewData.rate}
-          onSubmit={() => onSubmit(reviewData)}
+          disabled={!reviewData.content || !reviewData.rate}
+          onClick={() => {
+            onSubmit(reviewData);
+            // onCancel();
+          }}
           className={createReviewButton}
         >
           Submit review

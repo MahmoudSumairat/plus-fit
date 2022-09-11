@@ -19,14 +19,12 @@ const {
 } = styles;
 
 const Product = ({ product, className = "" }) => {
-  const { imgUrl, title, price, sale, rate } = product;
+  const { mainImgUrl, title, price, sale, rate, rates_count } = product;
   const navigate = useNavigate();
-  const dispatch = useDispatch();
-  const [addedToBag, setAddedToBag] = useState(product.addedToBag);
 
   const getRatingStars = () => {
     const counterArr = [];
-    const counter = Math.ceil(rate);
+    const counter = Math.ceil(rate / rates_count);
     for (let i = 0; i < counter; i++) {
       counterArr.push(i);
     }
@@ -36,26 +34,19 @@ const Product = ({ product, className = "" }) => {
   };
 
   const onProductClick = () => {
-    navigate(`/products/${product.id}`);
-  };
-
-  const addRemoveBag = (e) => {
-    //do api stuff
-    e.stopPropagation();
-    dispatch(addToBag());
-    setAddedToBag(true);
+    navigate(`/products/${product.product_id}`);
   };
 
   return (
     <div onClick={onProductClick} className={`${productBox} ${className} `}>
-      <img alt={title} src={imgUrl} className={productImage} />
+      <img alt={title} src={mainImgUrl} className={productImage} />
       <div className={productInfo}>
         <h6 className={productTitle}>{title}</h6>
         <span className={sale ? productOldPrice : productNewPrice}>
           ${calculatePrice(true, sale, price)}
         </span>
         <span className={productRating}>
-          {getRatingStars()} <span>{rate}</span>{" "}
+          {getRatingStars()} <span>{rate / rates_count}</span>{" "}
         </span>
         {!!sale && (
           <span className={productNewPrice}>
@@ -63,13 +54,7 @@ const Product = ({ product, className = "" }) => {
           </span>
         )}
       </div>
-      <Button
-        onClick={addRemoveBag}
-        buttonType={addedToBag ? "borderDark" : "normal"}
-        className={productButton}
-      >
-        {addedToBag ? "remove from bag" : "add to bag"}
-      </Button>
+      <Button className={productButton}>Details</Button>
     </div>
   );
 };

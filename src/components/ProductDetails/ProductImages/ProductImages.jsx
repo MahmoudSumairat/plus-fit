@@ -11,13 +11,11 @@ const {
 } = styles;
 
 const getMainImg = (images) => {
-  return images.findIndex((img) => img.isMainImg);
+  return images.findIndex((img) => img.is_main_img);
 };
 
-const ProductImages = ({ product: { productImages, name } }) => {
-  const [mainImageUrlIndex, setMainImgUrlIndex] = useState(
-    getMainImg(productImages)
-  );
+const ProductImages = ({ product: { images, name } }) => {
+  const [mainImageUrlIndex, setMainImgUrlIndex] = useState(getMainImg(images));
 
   const fullImagesCount = 5;
 
@@ -26,18 +24,18 @@ const ProductImages = ({ product: { productImages, name } }) => {
       <div className={productMainImageContainer}>
         <img
           className={mainImage}
-          src={productImages[mainImageUrlIndex].url}
+          src={images[mainImageUrlIndex].url}
           alt={name}
         />
       </div>
       <ul
         className={`${imagesList} ${
-          productImages.length === fullImagesCount ? fullImages : ""
+          images.length === fullImagesCount ? fullImages : ""
         } `}
       >
-        {productImages.map((image, index) => {
+        {images.map((image, index) => {
           const activeImageClass =
-            image === productImages[mainImageUrlIndex] ? activeImage : "";
+            image.url === images[mainImageUrlIndex].url ? activeImage : "";
           return (
             <li
               key={index}

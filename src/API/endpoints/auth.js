@@ -6,5 +6,5 @@ export const loginAPI = (credentials) => {
 };
 
 export const registerAPI = (credentials) => {
-  return http.post(registerRoute, credentials);
+  return http.post(registerRoute(), credentials);
 };

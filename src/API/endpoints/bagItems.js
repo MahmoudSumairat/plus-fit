@@ -2,6 +2,7 @@ import http from "../../http/http";
 import {
   addBagItemRoute,
   deleteBagItemRoute,
+  getBagItemsCountRoute,
   getBagItemsRoute,
   updateBagItemRoute,
 } from "../routes/bagItems";
@@ -20,4 +21,8 @@ export const updateBagItemAPI = (bagItemData, bagItemId) => {
 
 export const deleteBagItemAPI = (bagItemId) => {
   return http.delete(deleteBagItemRoute(bagItemId));
+};
+
+export const getBagItemsCountAPI = () => {
+  return http.get(getBagItemsCountRoute());
 };

@@ -5,7 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles from "./registerForm.module.scss";
 import { useDispatch } from "react-redux";
 import { formFields, getErrors, getValues, validations } from "./formFields";
-import { register } from "../../API/endpoints/auth";
+import { registerAPI } from "../../API/endpoints/auth";
 import { login as loginAction } from "../../redux/actionCreators/auth";
 import getFormValid from "../../helpers/getFormValid";
 import authStyles from "../../styles/auth.module.scss";
@@ -53,12 +53,23 @@ const RegisterForm = () => {
     setErrors(newErrors);
   };
 
-  const onSubmit = () => {
-    register(values).then(() => {
-      localStorage.setItem("authToken", "authToken");
-      dispatch(loginAction("authToken"));
+  const onSubmit = async () => {
+    // registerAPI(values).then(() => {
+    //   localStorage.setItem("authToken", "authToken");
+    //   dispatch(loginAction("authToken"));
+    //   navigate("/", { replace: true });
+    // });
+
+    try {
+      const {
+        data: { data },
+      } = await registerAPI(values);
+      localStorage.setItem("authToken", data);
+      dispatch(loginAction(data));
       navigate("/", { replace: true });
-    });
+    } catch (err) {
+      console.log(err);
+    }
   };
 
   return (

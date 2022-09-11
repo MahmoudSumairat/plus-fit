@@ -1,9 +1,11 @@
 import { LOGIN, LOGOUT } from "../actions/auth";
 import getAuthToken from "../../helpers/getAuthToken";
+import getUserData from "../../helpers/getUserData";
 
 const initialState = {
   isAuthenticated: !!getAuthToken(),
   authToken: getAuthToken(),
+  userData: getUserData(),
 };
 
 const authReducer = (state = initialState, { type, payload }) => {
@@ -11,7 +13,8 @@ const authReducer = (state = initialState, { type, payload }) => {
     case LOGIN:
       return {
         isAuthenticated: true,
-        authToken: payload,
+        authToken: payload.token,
+        userData: payload.userData,
       };
     case LOGOUT:
       return {

@@ -11,7 +11,7 @@ const ProductSize = ({
 
   const onSizeClick = (size, index) => {
     setActiveSizeIndex(index);
-    onSizeChange(size);
+    onSizeChange(size.size_id);
   };
 
   return (
@@ -22,7 +22,7 @@ const ProductSize = ({
           const activeSizeClass = activeSizeIndex === index ? activeSize : "";
           return (
             <span
-              key={size}
+              key={size.size_id}
               className={`${productSizeItem} ${activeSizeClass}`}
               onClick={() => onSizeClick(size, index)}
             >

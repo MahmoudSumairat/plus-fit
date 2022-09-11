@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 import productsList from "../../data/store/products";
 import ProductDetails from "../../components/ProductDetails/ProductDetails";
 import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
+import { getProductDetailsAPI } from "../../API/endpoints/products";
 
 const ProductById = () => {
   const { productId } = useParams();
@@ -10,18 +11,19 @@ const ProductById = () => {
 
   useEffect(() => {
     fetchProduct();
-  });
+  }, []);
 
-  const fetchProduct = () => {
-    const product = productsList.find((product) => product.id === +productId);
-    setProductData(product);
+  const fetchProduct = async () => {
+    try {
+      const {
+        data: { data },
+      } = await getProductDetailsAPI(productId);
+      setProductData(data);
+    } catch (err) {
+      console.log(err);
+    }
   };
-  return (
-    <>
-      <ProductDetails productData={productData} />
-      <RelatedProducts />
-    </>
-  );
+  return productData && <ProductDetails productData={productData} />;
 };
 
 export default ProductById;
