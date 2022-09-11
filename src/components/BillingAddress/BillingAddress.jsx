@@ -7,7 +7,7 @@ import styles from "./billingAddress.module.scss";
 const { formField, billingAddress, billingAddressForm, billingAddressTitle } =
   styles;
 
-const BillingAddress = ({ onChange = () => {} }) => {
+const BillingAddress = ({ onChange = () => {}, onErrorsChange = () => {} }) => {
   const [values, setValues] = useState(getValues());
   const [errors, setErrors] = useState(getErrors());
 
@@ -21,9 +21,20 @@ const BillingAddress = ({ onChange = () => {} }) => {
 
   const validateInput = ({ name, value }, field) => {
     const newErrors = { ...errors };
-    const inputValidation = validations[name](value, name);
+    const inputValidation = validations[name]
+      ? validations[name](value, name)
+      : true;
     newErrors[name] = inputValidation;
     setErrors(newErrors);
+    const errorsArr = Object.entries(newErrors)
+      .map((error) => error[1].valid)
+      .filter((isValid) => typeof isValid != "undefined");
+    const isAllValid = errorsArr.reduce(
+      (prev, current) => prev && current,
+      true
+    );
+
+    onErrorsChange(isAllValid);
   };
 
   return (
@@ -34,7 +45,12 @@ const BillingAddress = ({ onChange = () => {} }) => {
           return field.type === "select" ? (
             <Select
               error={errors[field.name].message}
-              onChange={(e) => handleOnChange(e, field)}
+              onChange={(e) =>
+                handleOnChange(
+                  { target: { value: e, name: field.name } },
+                  field
+                )
+              }
               className={formField}
               {...field}
               key={field.name}

@@ -10,7 +10,7 @@ const {
   shippingMethodsTitle,
 } = styles;
 
-const ShippingMethods = () => {
+const ShippingMethods = ({ onChange }) => {
   return (
     <div className={shippingMethodsContainer}>
       <h4 className={shippingMethodsTitle}>Shipping Methods:</h4>
@@ -21,6 +21,7 @@ const ShippingMethods = () => {
               name="shippingMethod"
               key={method.id}
               label={`$${method.price.toFixed(2)}`}
+              onChange={onChange}
             />
             <span className={methodCarrier}>{method.carrier}</span>
             <span className={methodEstimate}>

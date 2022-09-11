@@ -31,7 +31,7 @@ export const formFields = [
     required: true,
   },
   {
-    name: "country",
+    name: "countryId",
     label: "country",
     type: "select",
     items: countries,
@@ -78,7 +78,7 @@ export const validations = {
   firstName: required,
   lastName: required,
   city: required,
-  country: required,
+  countryId: required,
   mobilePhone: required,
   address1: required,
   zipCode: required,

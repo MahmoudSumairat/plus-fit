@@ -6,6 +6,7 @@ import {
 } from "../routes/addresses";
 
 export const addAddressAPI = (addressData) => {
+  console.log(addressData);
   return http.post(addAddressRoute(), addressData);
 };
 

@@ -1,15 +1,17 @@
 import React from "react";
 import styles from "./checkoutList.module.scss";
-import checkoutItems, { totalPrice } from "../../data/checkout/checkoutItems";
 import CheckoutItem from "./CheckoutItem/CheckoutItem";
 import CheckoutHeader from "./CheckoutHeader/CheckoutHeader";
+import calculateTotal from "../../helpers/calculateTotal";
 const { checkoutList, checkoutTotal, checkoutTotalData, checkoutInfo } = styles;
 
-const CheckoutList = () => {
+const CheckoutList = ({ bagItems }) => {
+  const totalPrice = calculateTotal(bagItems);
+
   return (
     <div className={checkoutList}>
       <CheckoutHeader />
-      {checkoutItems.map((item) => (
+      {bagItems.map((item) => (
         <CheckoutItem item={item} />
       ))}
       <div className={checkoutTotal}>
