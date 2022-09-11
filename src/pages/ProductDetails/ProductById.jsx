@@ -8,6 +8,7 @@ import { getProductDetailsAPI } from "../../API/endpoints/products";
 const ProductById = () => {
   const { productId } = useParams();
   const [productData, setProductData] = useState(null);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     fetchProduct();
@@ -15,15 +16,21 @@ const ProductById = () => {
 
   const fetchProduct = async () => {
     try {
+      setIsLoading(true);
       const {
         data: { data },
       } = await getProductDetailsAPI(productId);
       setProductData(data);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
     }
   };
-  return productData && <ProductDetails productData={productData} />;
+  return (
+    productData && (
+      <ProductDetails isLoading={isLoading} productData={productData} />
+    )
+  );
 };
 
 export default ProductById;

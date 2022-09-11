@@ -7,10 +7,12 @@ const ProductActions = ({
   onAddToBag = () => {},
   isAddedToBag,
   onRemoveFromBag = () => {},
+  isLoading,
 }) => {
   return (
     <div className={productActionsContainer}>
       <Button
+        isLoading={isLoading}
         onClick={isAddedToBag ? onRemoveFromBag : onAddToBag}
         color={isAddedToBag ? "borderDark" : "normal"}
         className={productAction}

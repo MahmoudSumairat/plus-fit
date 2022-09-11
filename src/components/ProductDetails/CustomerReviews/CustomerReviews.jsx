@@ -19,6 +19,7 @@ const CustomerReviews = ({
 }) => {
   const [createMode, setCreateMode] = useState(false);
   const [reviews, setReviews] = useState(productReviews);
+  const [isLoading, setIsLoading] = useState(false);
   const { user_id } = useUserData();
 
   const isReviewsByMe = !!productReviews.find(
@@ -27,7 +28,9 @@ const CustomerReviews = ({
 
   const onSubmit = async (data) => {
     try {
+      setIsLoading(true);
       await addReviewAPI({ ...data, productId: product_id });
+      setIsLoading(false);
       setReviews([...reviews, data]);
     } catch (err) {
       console.log(err);
@@ -61,6 +64,7 @@ const CustomerReviews = ({
 
       {createMode && (
         <CreateReview
+          isLoading={isLoading}
           onSubmit={onSubmit}
           onCancel={() => setCreateMode(false)}
         />

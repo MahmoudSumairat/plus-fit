@@ -31,6 +31,7 @@ const {
 const RegisterForm = () => {
   const [values, setValues] = useState(getValues());
   const [errors, setErrors] = useState(getErrors());
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -54,18 +55,14 @@ const RegisterForm = () => {
   };
 
   const onSubmit = async () => {
-    // registerAPI(values).then(() => {
-    //   localStorage.setItem("authToken", "authToken");
-    //   dispatch(loginAction("authToken"));
-    //   navigate("/", { replace: true });
-    // });
-
     try {
+      setIsLoading(true);
       const {
         data: { data },
       } = await registerAPI(values);
       localStorage.setItem("authToken", data);
       dispatch(loginAction(data));
+      setIsLoading(false);
       navigate("/", { replace: true });
     } catch (err) {
       console.log(err);
@@ -97,6 +94,7 @@ const RegisterForm = () => {
             className={`${authButton} ${registerButton} `}
             onClick={onSubmit}
             disabled={!getFormValid(errors)}
+            isLoading={isLoading}
           >
             sign up
           </Button>

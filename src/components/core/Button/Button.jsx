@@ -10,6 +10,8 @@ const {
   normalButton,
   buttonIcon,
   buttonPreIcon,
+  loading,
+  loadingContainer,
 } = styles;
 
 const buttonTypes = {
@@ -27,6 +29,7 @@ const Button = forwardRef(
       buttonType = "normal",
       className = "",
       preIcon,
+      isLoading = true,
       ...props
     },
     ref
@@ -34,16 +37,22 @@ const Button = forwardRef(
     return (
       <button
         type="button"
-        className={`${commonButton} ${withArrow ? arrowButton : ""} ${
-          buttonTypes[buttonType]
-        }  ${className} `}
+        className={`${commonButton} ${isLoading ? loadingContainer : ""} ${
+          withArrow ? arrowButton : ""
+        } ${buttonTypes[buttonType]}  ${className} `}
         {...props}
         ref={ref}
       >
-        {withArrow && <ArrowRight />}
-        {preIcon && <span className={buttonPreIcon}>{preIcon}</span>}
-        {children}
-        {icon && <span className={buttonIcon}>{icon}</span>}
+        {!isLoading ? (
+          <>
+            {withArrow && <ArrowRight />}
+            {preIcon && <span className={buttonPreIcon}>{preIcon}</span>}
+            {children}
+            {icon && <span className={buttonIcon}>{icon}</span>}
+          </>
+        ) : (
+          <span className={loading}></span>
+        )}
       </button>
     );
   }

@@ -16,13 +16,16 @@ const Checkout = () => {
   const [addressData, setAddressData] = useState({});
   const [shippingMethod, setShippingMethod] = useState(null);
   const [isFormValid, setIsFormValid] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const navigate = useNavigate();
   const fetchBagItems = async () => {
     try {
+      setIsLoading(true);
       const {
         data: { data },
       } = await getBagItemsAPI();
       setBagItems(data);
+      setIsLoading(false);
     } catch (err) {
       console.log(err);
     }
@@ -53,7 +56,11 @@ const Checkout = () => {
         onChange={onAddressDataChange}
       />
       <ShippingMethods onChange={onShippingMethodChange} />
-      <PaymentMethods isFormValid={isFormValid} onClick={onSubmit} />
+      <PaymentMethods
+        isLoading={isLoading}
+        isFormValid={isFormValid}
+        onClick={onSubmit}
+      />
     </div>
   );
 };

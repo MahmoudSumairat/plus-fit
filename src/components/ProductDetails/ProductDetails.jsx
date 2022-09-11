@@ -19,7 +19,7 @@ import { useDispatch } from "react-redux";
 
 const { productInfo, productDetailsContainer, productSpecs } = styles;
 
-const ProductDetails = ({ productData }) => {
+const ProductDetails = ({ productData, isLoading }) => {
   const [selectedSize, setSelectedSize] = useState(
     productData.availableSizes[0].size_id
   );
@@ -81,6 +81,7 @@ const ProductDetails = ({ productData }) => {
           />
           <ProductQuantity onChange={setSelectedQuantity} />
           <ProductActions
+            isLoading={isLoading}
             isAddedToBag={isAddedToBag}
             onRemoveFromBag={removeFromBag}
             onAddToBag={addToBag}

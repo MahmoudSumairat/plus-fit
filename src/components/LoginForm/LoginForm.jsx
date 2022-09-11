@@ -32,6 +32,7 @@ const LoginForm = () => {
     password: { message: null, valid: false },
     email: { message: null, valid: false },
   });
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
@@ -52,11 +53,13 @@ const LoginForm = () => {
 
   const onSubmit = async () => {
     try {
+      setIsLoading(true);
       const {
         data: {
           data: { token, userData },
         },
       } = await loginAPI(values);
+      setIsLoading(false);
       localStorage.setItem("authToken", token);
       localStorage.setItem("userData", JSON.stringify(userData));
       dispatch(loginAction({ token, userData }));
@@ -96,6 +99,7 @@ const LoginForm = () => {
             buttonType="borderDark"
             type="button"
             disabled={!getFormValid(errors)}
+            isLoading={isLoading}
           >
             login
           </Button>

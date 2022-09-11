@@ -9,7 +9,7 @@ const {
   paymentMethodsButtonContainer,
 } = styles;
 
-const PaymentMethods = ({ onClick, isFormValid }) => {
+const PaymentMethods = ({ onClick, isFormValid, isLoading }) => {
   return (
     <div className={paymentMethodsContainer}>
       <h4 className={paymentMethodsTitle}>Payment</h4>
@@ -18,6 +18,7 @@ const PaymentMethods = ({ onClick, isFormValid }) => {
           onClick={onClick}
           disabled={!isFormValid}
           className={paymentMethodsButton}
+          isLoading={isLoading}
         >
           Pay and place order
         </Button>

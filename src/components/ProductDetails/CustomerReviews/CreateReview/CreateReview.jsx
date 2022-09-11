@@ -6,7 +6,7 @@ import styles from "./createReview.module.scss";
 
 const { createReviewButton, createReviewActions, createReviewTitle } = styles;
 
-const CreateReview = ({ onSubmit, onCancel }) => {
+const CreateReview = ({ onSubmit, onCancel, isLoading }) => {
   const [reviewData, setReviewData] = useState({ rate: 0, content: "" });
 
   const onReviewChange = ({ target: { value } }) => {
@@ -37,8 +37,9 @@ const CreateReview = ({ onSubmit, onCancel }) => {
           disabled={!reviewData.content || !reviewData.rate}
           onClick={() => {
             onSubmit(reviewData);
-            // onCancel();
+            onCancel();
           }}
+          isLoading={isLoading}
           className={createReviewButton}
         >
           Submit review
