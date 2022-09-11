@@ -29,7 +29,7 @@ const Button = forwardRef(
       buttonType = "normal",
       className = "",
       preIcon,
-      isLoading = true,
+      isLoading,
       ...props
     },
     ref

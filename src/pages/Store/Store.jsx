@@ -28,7 +28,10 @@ const Store = () => {
   const location = useLocation();
   const productCategory = getProductCategory(location);
   const isMainPageStore = getIsMainPageStore(productCategory);
+  const [pagesCount, setPagesCount] = useState(0);
   const [products, setProducts] = useState([]);
+  const [currentPageNumber, setCurrentPageNumber] = useState(1);
+  const PRODUCTS_PER_PAGE = 12;
 
   useEffect(() => {
     if (productCategory !== "store") {
@@ -37,14 +40,18 @@ const Store = () => {
     } else {
       fetchAllProducts();
     }
-  }, []);
+  }, [location.pathname]);
 
-  const fetchAllProducts = async () => {
+  const fetchAllProducts = async (pageNumber = 1) => {
     try {
       const {
-        data: { data },
-      } = await getAllProductsAPI(10, 1);
-      setProducts(data);
+        data: {
+          data: { products, totalElements },
+        },
+      } = await getAllProductsAPI(PRODUCTS_PER_PAGE, pageNumber);
+      setProducts(products);
+      setPagesCount(Math.ceil(totalElements / PRODUCTS_PER_PAGE));
+      setCurrentPageNumber(pageNumber);
     } catch (err) {
       console.log(err);
     }
@@ -65,6 +72,8 @@ const Store = () => {
     }
   };
 
+  console.log(pagesCount);
+
   return (
     <div className={storePage}>
       <StoreHeader isExpanded={isExpanded} getToggleProps={getToggleProps} />
@@ -74,7 +83,11 @@ const Store = () => {
       {products.length ? (
         <>
           <StoreProducts category={productCategory} products={products} />
-          <ProductsPagination pagesCount={5} />
+          <ProductsPagination
+            currentPageIndex={currentPageNumber}
+            onPageIndexChange={(pageNumber) => fetchAllProducts(pageNumber)}
+            pagesCount={pagesCount}
+          />
         </>
       ) : (
         <p className={noProducts}>no products yet ... </p>

@@ -6,11 +6,14 @@ import {
   deleteBagItemAPI,
   updateBagItemAPI,
 } from "../../../API/endpoints/bagItems";
+import { removeFromBag } from "../../../redux/actionCreators/bag";
+import { useDispatch } from "react-redux";
 
-const BagList = ({ bagItems: items }) => {
+const BagList = ({ bagItems: items, fetchBagItems }) => {
   const [sizes, setSizes] = useState([]);
   const [colors, setColors] = useState([]);
   const [bagItems, setBagItems] = useState(items);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     fetchColors();
@@ -22,7 +25,9 @@ const BagList = ({ bagItems: items }) => {
     try {
       await deleteBagItemAPI(id);
       const newBagItems = bagItems.filter((item) => item.bagItemId !== id);
+      fetchBagItems();
       setBagItems(newBagItems);
+      dispatch(removeFromBag());
     } catch (err) {
       console.log(err);
     }

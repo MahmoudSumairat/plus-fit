@@ -21,7 +21,7 @@ const ProductRate = ({ product: { rate = 0, rates_count } }) => {
         return <StarFill key={item} />;
       })}
 
-      <span className={rateText}>{rate / rates_count}</span>
+      {!!rate && <span className={rateText}>{rate / rates_count}</span>}
     </div>
   );
 };

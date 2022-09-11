@@ -37,6 +37,8 @@ const Product = ({ product, className = "" }) => {
     navigate(`/products/${product.product_id}`);
   };
 
+  console.log(rate, rates_count);
+
   return (
     <div onClick={onProductClick} className={`${productBox} ${className} `}>
       <img alt={title} src={mainImgUrl} className={productImage} />
@@ -46,7 +48,7 @@ const Product = ({ product, className = "" }) => {
           ${calculatePrice(true, sale, price)}
         </span>
         <span className={productRating}>
-          {getRatingStars()} <span>{rate / rates_count}</span>{" "}
+          {getRatingStars()} {!!rate && <span>{rate / rates_count}</span>}
         </span>
         {!!sale && (
           <span className={productNewPrice}>

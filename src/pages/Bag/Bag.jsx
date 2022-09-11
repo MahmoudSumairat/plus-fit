@@ -18,9 +18,7 @@ const Bag = () => {
         data: { data },
       } = await getBagItemsAPI();
       setBagItems(data);
-    } catch (err) {
-      console.log(err);
-    }
+    } catch (err) {}
   };
 
   return (
@@ -29,7 +27,7 @@ const Bag = () => {
         <>
           <h1 className={bagTitle}>Whats in the bag</h1>
           <div className={bagList}>
-            <BagList bagItems={bagItems} />
+            <BagList fetchBagItems={fetchBagItems} bagItems={bagItems} />
           </div>
           <div className={bagSidebar}>
             <BagSidebar bagItems={bagItems} />

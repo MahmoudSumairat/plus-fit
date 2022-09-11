@@ -23,9 +23,11 @@ const BestSellers = () => {
   const fetchProducts = async () => {
     try {
       const {
-        data: { data },
+        data: {
+          data: { products },
+        },
       } = await getAllProductsAPI(10, 1);
-      setBestSellerProducts(data);
+      setBestSellerProducts(products);
     } catch (err) {
       console.log(err);
     }
