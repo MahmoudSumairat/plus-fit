@@ -13,7 +13,7 @@ const {
   bagSidebarDeliveryReturns,
 } = styles;
 
-const BagSidebar = () => {
+const BagSidebar = ({ bagItems }) => {
   const navigate = useNavigate();
   const proceedToCheckout = () => {
     // do api stuff
@@ -36,7 +36,7 @@ const BagSidebar = () => {
         </div>
       </div>
 
-      <BagTotals proceedToCheckout={proceedToCheckout} />
+      <BagTotals bagItems={bagItems} proceedToCheckout={proceedToCheckout} />
     </div>
   );
 };

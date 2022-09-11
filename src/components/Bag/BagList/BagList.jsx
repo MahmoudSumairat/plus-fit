@@ -2,7 +2,10 @@ import React, { useEffect, useState } from "react";
 import BagItem from "../BagItem/BagItem";
 import bagItemsData from "../../../data/bag/bagItems";
 import { getColorsAPI, getSizesAPI } from "../../../API/endpoints/lookups";
-import { deleteBagItemAPI } from "../../../API/endpoints/bagItems";
+import {
+  deleteBagItemAPI,
+  updateBagItemAPI,
+} from "../../../API/endpoints/bagItems";
 
 const BagList = ({ bagItems: items }) => {
   const [sizes, setSizes] = useState([]);
@@ -47,19 +50,50 @@ const BagList = ({ bagItems: items }) => {
     }
   };
 
-  console.log(colors, sizes);
+  const updateBagItem = async (
+    updateField,
+    updateValue,
+    bagItemId,
+    productId
+  ) => {
+    try {
+      await updateBagItemAPI(
+        { updateField, updateValue, productId },
+        bagItemId
+      );
+      const bagItemPropsMap = {
+        colorId: "selectedColor",
+        sizeId: "selectedSize",
+        quantity: "quantity",
+      };
+      const bagItemIndex = bagItems.findIndex(
+        (item) => item.bagItemId === bagItemId
+      );
+      const newBagItems = [...bagItems];
+      newBagItems[bagItemIndex][bagItemPropsMap[updateField]] = updateValue;
+      setBagItems(newBagItems);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
-    !!colors.length &&
-    !!sizes.length && (
+    !!bagItems.length && (
       <ul>
         {bagItems.map((item) => {
           return (
             <BagItem
-              colors={colors}
-              sizes={sizes}
               removeBagItem={removeBagItem}
               item={item}
+              onColorChange={(value, productId, bagItemId) =>
+                updateBagItem("colorId", value, bagItemId, productId)
+              }
+              onSizeChange={(value, productId, bagItemId) =>
+                updateBagItem("sizeId", value, bagItemId, productId)
+              }
+              onQuantityChange={(value, productId, bagItemId) =>
+                updateBagItem("quantity", value, bagItemId, productId)
+              }
             />
           );
         })}

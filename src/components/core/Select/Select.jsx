@@ -11,9 +11,11 @@ const getSelectButtonText = (items, defaultValue, placeholder) => {
     return placeholder;
   }
 
-  const buttonText = items.find((item) => item.id === defaultValue);
+  const buttonText = items.find(
+    (item) => (item.id || item.size_id || item.color_id) === defaultValue
+  );
 
-  return buttonText.title;
+  return buttonText ? buttonText.title : "";
 };
 
 const Select = ({

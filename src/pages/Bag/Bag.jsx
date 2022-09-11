@@ -25,7 +25,6 @@ const Bag = () => {
 
   return (
     <div className={bagPage}>
-      {" "}
       {!!bagItems.length ? (
         <>
           <h1 className={bagTitle}>Whats in the bag</h1>
@@ -33,7 +32,7 @@ const Bag = () => {
             <BagList bagItems={bagItems} />
           </div>
           <div className={bagSidebar}>
-            <BagSidebar />
+            <BagSidebar bagItems={bagItems} />
           </div>
         </>
       ) : (
