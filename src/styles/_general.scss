@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 *,
 *::after,
@@ -13,6 +14,12 @@ html {
 
   &::-webkit-scrollbar {
     display: none;
+  }
+}
+
+@include on-device(tablet) {
+  html {
+    font-size: 50%;
   }
 }
 

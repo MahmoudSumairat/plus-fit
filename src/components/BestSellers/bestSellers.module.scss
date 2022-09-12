@@ -1,25 +1,33 @@
 @import "../../styles/mixins";
 
 .bestSellersProductsContainer {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .bestSellersProduct {
-    width : 18%;
-    margin : 1%
+  width: 18%;
+  margin: 1%;
 }
 
 .bestSellersTitle {
-    font-weight: 400;
-    font-size: 4rem;
-    margin : 9rem 1rem;
-    text-align: center;
+  font-weight: 400;
+  font-size: 4rem;
+  margin: 9rem 1rem;
+  text-align: center;
 }
 
-
-
 .bestSellersExplore {
-    margin-top: 5rem;
-    @include flex-center();
+  margin-top: 5rem;
+  @include flex-center();
+}
+
+@include on-device(tablet) {
+  .bestSellersProduct {
+    width: 31%;
+  }
+
+  .bestSellersProductsContainer {
+    justify-content: center;
+  }
 }

@@ -1,7 +1,16 @@
+@import "/src/styles/mixins";
+
 .banner {
   height: 100vh;
   background-image: url(../../../public/images/Banner.jpg);
   margin: 0 -2rem;
   margin-top: -10rem;
   background-size: cover;
+}
+
+@include on-device(tablet) {
+  .banner {
+    margin: 0 !important;
+    margin-top: -10rem !important;
+  }
 }

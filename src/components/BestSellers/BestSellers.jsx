@@ -13,6 +13,8 @@ const {
   bestSellersExplore,
 } = styles;
 
+const PER_PAGE = window.innerWidth <= 768 ? 9 : 10;
+
 const BestSellers = () => {
   const [bestSellerProducts, setBestSellerProducts] = useState([]);
 
@@ -26,7 +28,7 @@ const BestSellers = () => {
         data: {
           data: { products },
         },
-      } = await getAllProductsAPI(10, 1);
+      } = await getAllProductsAPI(PER_PAGE, 1);
       setBestSellerProducts(products);
     } catch (err) {
       console.log(err);

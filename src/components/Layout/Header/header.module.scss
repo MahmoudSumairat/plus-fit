@@ -75,3 +75,14 @@
     }
   }
 }
+
+@include on-device(tablet) {
+  .darkHeader,
+  .lightHeader {
+    li {
+      a {
+        font-size: 1.4rem;
+      }
+    }
+  }
+}

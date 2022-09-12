@@ -70,3 +70,44 @@
 .becomeMemberInput {
   margin: 5rem 0;
 }
+
+@include on-device(tablet) {
+  .becomeMemberImgText {
+    font-size: 5rem;
+    left: 75%;
+  }
+  .becomeMemberImgContainer {
+    clip-path: none;
+    margin: 0;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .becomeMemberInfo {
+    z-index: 999;
+    left: 30%;
+
+    button {
+      color: $white !important;
+      border-color: $white !important;
+    }
+
+    input {
+      border-color: $white !important;
+    }
+
+    p {
+      color: $white;
+    }
+  }
+
+  .becomeMemberLogoImg {
+    height: 6rem;
+  }
+
+  .becomeMemberOverlay {
+    height: 99.5%;
+  }
+}

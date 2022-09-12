@@ -65,3 +65,20 @@
   right: -0.7rem;
   @include flex-center();
 }
+
+@include on-device(tablet) {
+  .user,
+  .bag {
+    width: 2rem;
+    height: 2rem;
+  }
+
+  .bagCount {
+    bottom: -1.5rem;
+    right: -1.5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: 1rem;
+    padding: 0.1rem;
+  }
+}

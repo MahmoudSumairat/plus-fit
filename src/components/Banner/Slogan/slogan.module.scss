@@ -18,4 +18,8 @@
   .last {
     transform: translateX(17%);
   }
+
+  @include on-device(tablet) {
+    font-size: 5rem;
+  }
 }
