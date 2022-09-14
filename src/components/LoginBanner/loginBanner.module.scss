@@ -2,38 +2,45 @@
 @import "../../styles/mixins";
 
 .loginImg {
-    width: 70%;
-    object-fit: cover;
+  width: 70%;
+  object-fit: cover;
+  height: 100%;
 }
 
-
+.loginInfoContainer {
+  height: 100vh;
+}
 
 .loginOverlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba($primary, .6);
-    left : 0;
-    top : 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($primary, 0.6);
+  left: 0;
+  top: 0;
 }
 
 .loginTitle {
-    color: $white;
-    font-size: 4rem;
-    @include absolute-center();
-    left: 27%;
-    width: 49%;
-    top : 45%;
-    
+  color: $white;
+  font-size: 4rem;
+  @include absolute-center();
+  left: 27%;
+  width: 49%;
+  top: 45%;
 }
 
 .fitLogo {
-    width : 9rem;
-    position: absolute;
-    top : 0;
-    left : 4rem;
-    path {
-        fill : $white
+  width: 9rem;
+  position: absolute;
+  top: 0;
+  left: 4rem;
+  path {
+    fill: $white;
+  }
+}
 
-    }
+@include on-device(mobile) {
+  .loginTitle {
+    display: none;
+  }
 }

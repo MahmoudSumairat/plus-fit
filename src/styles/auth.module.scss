@@ -1,4 +1,5 @@
 @import "./variables";
+@import "./mixins";
 
 .authFields {
   width: 35%;
@@ -35,4 +36,17 @@
   height: 100%;
   display: flex;
   align-items: center;
+}
+
+@include on-device(mobile) {
+  .authFields {
+    margin-right: 3rem;
+    width: 65%;
+  }
+}
+@include on-device(large-tablet) {
+  .authFields {
+    margin-right: 4rem;
+    width: 60%;
+  }
 }
