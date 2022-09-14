@@ -26,3 +26,15 @@
   font-size: 3rem;
   opacity: 0.6;
 }
+
+@include on-device(large-tablet) {
+  .bagPage {
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .bagList,
+  .bagSidebar {
+    width: 100%;
+  }
+}
