@@ -18,8 +18,16 @@
   .last {
     transform: translateX(17%);
   }
+}
 
-  @include on-device(tablet) {
+@include on-device(tablet) {
+  .slogan {
     font-size: 5rem;
+  }
+}
+
+@include on-device(mobile) {
+  .slogan {
+    font-size: 2.5rem;
   }
 }

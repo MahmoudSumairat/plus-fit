@@ -111,3 +111,59 @@
     height: 99.5%;
   }
 }
+
+@include on-device(mobile) {
+  .becomeMemberImgText {
+    font-size: 3rem;
+    left: 0;
+    @include flex-center;
+    transform: none;
+    top: 0;
+    width: 100%;
+  }
+  .becomeMemberImgContainer {
+    clip-path: none;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .becomeMemberImg {
+    height: 100% !important;
+    object-fit: cover;
+  }
+
+  .becomeMemberInfo {
+    z-index: 999;
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 4rem;
+
+    button {
+      color: $white !important;
+      border-color: $white !important;
+    }
+
+    .becomeMemberInput {
+      width: 80%;
+      input {
+        border-color: $white !important;
+      }
+    }
+
+    p {
+      color: $white;
+      width: 80%;
+    }
+  }
+
+  .becomeMemberLogoImg {
+    height: 5rem !important;
+  }
+
+  .becomeMemberOverlay {
+    height: 99.5%;
+  }
+}

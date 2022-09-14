@@ -5,15 +5,17 @@ import NavItem from "./NavItem/NavItem";
 
 const { nav, navList } = styles;
 
-const Nav = ({ className }) => {
+const Nav = ({ className, showMobileMenu, setShowMobileMenu }) => {
   return (
-    <nav className={`${nav} ${className} `}>
-      <ul className={navList}>
-        {routesList.map((route) => {
-          return <NavItem key={route.link} route={route} />;
-        })}
-      </ul>
-    </nav>
+    <>
+      <nav className={`${nav} ${className} `}>
+        <ul className={navList}>
+          {routesList.map((route) => {
+            return <NavItem key={route.link} route={route} />;
+          })}
+        </ul>
+      </nav>
+    </>
   );
 };
 

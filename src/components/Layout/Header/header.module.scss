@@ -19,6 +19,10 @@
   justify-content: flex-start;
 }
 
+.menuButton {
+  display: none;
+}
+
 .headerLogo {
   &.darkHeader {
     svg {
@@ -76,6 +80,19 @@
   }
 }
 
+.menuButton {
+  cursor: pointer;
+  margin-right: 1rem;
+
+  svg {
+    height: 3rem;
+    width: 3rem;
+    path {
+      color: $white;
+    }
+  }
+}
+
 @include on-device(tablet) {
   .darkHeader,
   .lightHeader {
@@ -84,5 +101,19 @@
         font-size: 1.4rem;
       }
     }
+  }
+}
+
+@include on-device(mobile) {
+  .headerNav {
+    display: none;
+  }
+
+  .header {
+    justify-content: space-between;
+  }
+
+  .menuButton {
+    display: block;
   }
 }

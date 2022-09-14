@@ -50,3 +50,19 @@
     font-size: 4rem;
   }
 }
+@include on-device(mobile) {
+  .categoryTitle {
+    font-size: 2.5rem;
+  }
+
+  .categoryBox {
+    width: 48%;
+    transform: none;
+    margin: 1rem 0;
+    text-align: center;
+  }
+
+  .categoryButton {
+    opacity: 1;
+  }
+}

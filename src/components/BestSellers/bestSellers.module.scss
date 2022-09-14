@@ -31,3 +31,10 @@
     justify-content: center;
   }
 }
+
+@include on-device(mobile) {
+  .bestSellersProduct {
+    width: 95%;
+    margin-bottom: 4rem;
+  }
+}
