@@ -17,6 +17,6 @@
 
 @include on-device(mobile) {
   .banner {
-    background-position: -100%;
+    background-image: url(../../../public/images/mobile-banner.jpg);
   }
 }

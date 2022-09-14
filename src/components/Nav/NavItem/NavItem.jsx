@@ -5,7 +5,7 @@ import styles from "./navItem.module.scss";
 
 const { navItem, activeNav } = styles;
 
-const NavItem = ({ route }) => {
+const NavItem = ({ route, onClick }) => {
   const { pathname } = useLocation();
 
   return (
@@ -16,7 +16,9 @@ const NavItem = ({ route }) => {
         } `}
         key={route.link}
       >
-        <Link to={route.link}>{route.name} </Link>
+        <Link onClick={onClick} to={route.link}>
+          {route.name}
+        </Link>
       </li>
     )
   );

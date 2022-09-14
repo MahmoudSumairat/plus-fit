@@ -1,11 +1,28 @@
+@import "/src/styles/mixins";
+
 .storeProductsContainer {
   display: flex;
   flex-wrap: wrap;
   margin-left: -1%;
   margin-right: -1%;
+  margin-top: 4rem;
 }
 
 .storeProduct {
   width: 23%;
   margin: 1%;
+}
+
+@include on-device(mobile) {
+  .storeProduct {
+    width: 95% !important;
+    margin-bottom: 4rem;
+  }
+}
+
+@include on-device(large-tablet) {
+  .storeProduct {
+    width: 31%;
+    margin-bottom: 4rem;
+  }
 }

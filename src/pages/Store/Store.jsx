@@ -49,6 +49,7 @@ const Store = () => {
           data: { products, totalElements },
         },
       } = await getAllProductsAPI(PRODUCTS_PER_PAGE, pageNumber);
+      console.log("???");
       setProducts(products);
       setPagesCount(Math.ceil(totalElements / PRODUCTS_PER_PAGE));
       setCurrentPageNumber(pageNumber);
@@ -60,19 +61,22 @@ const Store = () => {
   const fetchAllProductsByType = async () => {
     try {
       const {
-        data: { data },
+        data: {
+          data: { products, totalElements },
+        },
       } = await getProductsByTypeAPI(
         PRODUCTS_CATEGORIES[productCategory],
         10,
         1
       );
-      setProducts(data);
+      setProducts(products);
+      setPagesCount(Math.ceil(totalElements / PRODUCTS_PER_PAGE));
     } catch (err) {
       console.log(err);
     }
   };
 
-  console.log(pagesCount);
+  console.log(products);
 
   return (
     <div className={storePage}>

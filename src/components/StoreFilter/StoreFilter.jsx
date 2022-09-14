@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Select from "../core/Select/Select";
-import Range from "../core/Range/Range";
 import colors from "../../data/lookups/colors";
 import sizes from "../../data/lookups/sizes";
 import categories from "../../data/lookups/categories";
@@ -8,7 +7,7 @@ import brands from "../../data/lookups/brands";
 
 import styles from "./storeFilter.module.scss";
 
-const { storeFilter, storeSelect } = styles;
+const { storeFilter, storeSelect, range } = styles;
 
 const StoreFilter = ({ filterChange = () => {}, categorySelected = false }) => {
   const [filters, setFilters] = useState({});
@@ -56,7 +55,6 @@ const StoreFilter = ({ filterChange = () => {}, categorySelected = false }) => {
         defaultValue={filters.size}
         className={storeSelect}
       />
-      <Range />
     </div>
   );
 };

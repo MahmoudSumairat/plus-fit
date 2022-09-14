@@ -1,4 +1,13 @@
+@import "/src/styles/mixins";
+
 .appContainer {
   padding: 2rem 10rem;
   padding-top: 10rem;
+}
+
+@include on-device(tablet) {
+  .appContainer {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

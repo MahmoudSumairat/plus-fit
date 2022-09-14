@@ -13,7 +13,13 @@ const MobileNav = ({ setShowMobileMenu }) => {
       <nav className={nav}>
         <ul className={navList}>
           {routesList.map((route) => {
-            return <NavItem key={route.link} route={route} />;
+            return (
+              <NavItem
+                onClick={() => setShowMobileMenu(false)}
+                key={route.link}
+                route={route}
+              />
+            );
           })}
         </ul>
       </nav>

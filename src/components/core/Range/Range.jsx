@@ -3,7 +3,7 @@ import styles from "./range.module.scss";
 
 const { rangeContainer, rangeWrapper, rangeValue } = styles;
 
-const Range = ({ valueFactor = 100, onChange = () => {} }) => {
+const Range = ({ valueFactor = 100, onChange = () => {}, className = "" }) => {
   const containerRef = useRef();
   const firstThumbRef = useRef();
   const lastThumbRef = useRef();
@@ -60,7 +60,7 @@ const Range = ({ valueFactor = 100, onChange = () => {} }) => {
   };
 
   return (
-    <div className={rangeWrapper}>
+    <div className={`${rangeWrapper} ${className} `}>
       <div
         ref={containerRef}
         onMouseDown={onMouseDown}
