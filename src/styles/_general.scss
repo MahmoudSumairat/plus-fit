@@ -43,7 +43,13 @@ input {
   }
 }
 
-@include on-device(tablet) {
+@include on-device(small-laptop) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@include on-device(large-tablet) {
   html {
     font-size: 50%;
   }
@@ -52,5 +58,11 @@ input {
 @include on-device(mobile) {
   html {
     font-size: 40%;
+  }
+}
+
+@include on-device(small-mobile) {
+  html {
+    font-size: 35%;
   }
 }

@@ -18,6 +18,8 @@
 
 .becomeMemberImg {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .becomeMemberSection {
@@ -71,65 +73,15 @@
   margin: 5rem 0;
 }
 
-@include on-device(tablet) {
+@include on-device(small-laptop) {
   .becomeMemberImgText {
-    font-size: 5rem;
-    left: 75%;
-  }
-  .becomeMemberImgContainer {
-    clip-path: none;
-    margin: 0;
-    img {
-      width: 100%;
-      height: auto;
-    }
-  }
-
-  .becomeMemberInfo {
-    z-index: 999;
-    left: 30%;
-
-    button {
-      color: $white !important;
-      border-color: $white !important;
-    }
-
-    input {
-      border-color: $white !important;
-    }
-
-    p {
-      color: $white;
-    }
-  }
-
-  .becomeMemberLogoImg {
-    height: 6rem;
-  }
-
-  .becomeMemberOverlay {
-    height: 99.5%;
-  }
-}
-
-@include on-device(mobile) {
-  .becomeMemberImgText {
-    font-size: 3rem;
-    left: 0;
-    @include flex-center;
-    transform: none;
-    top: 0;
-    width: 100%;
+    display: none;
   }
   .becomeMemberImgContainer {
     clip-path: none;
     margin: 0;
     height: 100vh;
-  }
-
-  .becomeMemberImg {
-    height: 100% !important;
-    object-fit: cover;
+    width: 100%;
   }
 
   .becomeMemberInfo {
@@ -147,7 +99,7 @@
     }
 
     .becomeMemberInput {
-      width: 80%;
+      width: 60%;
       input {
         border-color: $white !important;
       }
@@ -156,7 +108,46 @@
     p {
       color: $white;
       width: 80%;
+      font-size: 3rem;
     }
+  }
+
+  .becomeMemberLogoImg {
+    height: 6rem;
+  }
+
+  .becomeMemberOverlay {
+    height: 99.5%;
+  }
+
+  .becomeMemberImg {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+@include on-device(mobile) {
+  .becomeMemberImgContainer {
+    clip-path: none;
+    margin: 0;
+    height: 100vh;
+  }
+
+  .becomeMemberImg {
+    height: 100% !important;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .becomeMemberInfo {
+    z-index: 999;
+    width: 100%;
+    @include flex-center;
+    flex-direction: column;
+    left: 0;
+    transform: translateY(-50%);
+    padding: 4rem;
   }
 
   .becomeMemberLogoImg {
@@ -165,5 +156,12 @@
 
   .becomeMemberOverlay {
     height: 99.5%;
+  }
+
+  .becomeMemberInput {
+    width: 80% !important;
+    input {
+      border-color: $white !important;
+    }
   }
 }

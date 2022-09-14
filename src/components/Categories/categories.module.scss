@@ -17,5 +17,8 @@
 @include on-device(mobile) {
   .categoriesRow {
     flex-wrap: wrap;
+    height: auto;
+    min-height: 0;
+    margin: 10rem 0;
   }
 }

@@ -13,8 +13,7 @@ const {
   bestSellersExplore,
 } = styles;
 
-const PER_PAGE =
-  window.innerWidth <= 520 ? 5 : window.innerWidth <= 768 ? 9 : 10;
+const PER_PAGE = 15;
 
 const BestSellers = () => {
   const [bestSellerProducts, setBestSellerProducts] = useState([]);

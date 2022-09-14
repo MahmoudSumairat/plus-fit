@@ -20,6 +20,18 @@
   }
 }
 
+@include on-device(small-laptop) {
+  .slogan {
+    font-size: 6.5rem;
+  }
+}
+
+@include on-device(large-tablet) {
+  .slogan {
+    font-size: 6rem;
+  }
+}
+
 @include on-device(tablet) {
   .slogan {
     font-size: 5rem;

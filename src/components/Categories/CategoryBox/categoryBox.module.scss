@@ -66,3 +66,10 @@
     opacity: 1;
   }
 }
+
+@include on-device(small-mobile) {
+  .categoryButton {
+    top: 85%;
+    width: 80%;
+  }
+}

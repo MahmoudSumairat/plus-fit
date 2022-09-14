@@ -8,9 +8,15 @@
   background-size: cover;
 }
 
-@include on-device(tablet) {
+@include on-device(small-laptop) {
   .banner {
     margin: 0 !important;
     margin-top: -10rem !important;
+  }
+}
+
+@include on-device(mobile) {
+  .banner {
+    background-position: -100%;
   }
 }

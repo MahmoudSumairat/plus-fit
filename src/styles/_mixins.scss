@@ -12,6 +12,16 @@
 }
 
 @mixin on-device($device) {
+  @if ($device == small-laptop) {
+    @media only screen and (max-width: 1366px) {
+      @content;
+    }
+  }
+  @if ($device == large-tablet) {
+    @media only screen and (max-width: 1024px) {
+      @content;
+    }
+  }
   @if ($device == tablet) {
     @media only screen and (max-width: 768px) {
       @content;
@@ -19,7 +29,12 @@
   }
 
   @if ($device == mobile) {
-    @media only screen and (max-width: 520px) {
+    @media only screen and (max-width: 580px) {
+      @content;
+    }
+  }
+  @if ($device == small-mobile) {
+    @media only screen and (max-width: 380px) {
       @content;
     }
   }

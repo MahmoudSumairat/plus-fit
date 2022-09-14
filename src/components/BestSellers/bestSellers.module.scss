@@ -22,11 +22,13 @@
   @include flex-center();
 }
 
-@include on-device(tablet) {
+@include on-device(large-tablet) {
   .bestSellersProduct {
     width: 31%;
   }
+}
 
+@include on-device(tablet) {
   .bestSellersProductsContainer {
     justify-content: center;
   }
