@@ -26,7 +26,14 @@
   width: 9rem;
   position: absolute;
   right: 4rem;
+  z-index: 9999;
   path {
     fill: $white;
+  }
+}
+
+@include on-device(large-tablet) {
+  .registerTitle {
+    display: none;
   }
 }

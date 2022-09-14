@@ -1,4 +1,5 @@
 @import "../../styles/variables";
+@import "../../styles/mixins";
 
 .registerFormContainer {
   filter: drop-shadow(-10px -10px 30px rgba($black, 0.9));
@@ -30,4 +31,43 @@
 
 .registerLink {
   margin: 1rem 0;
+}
+
+@include on-device(large-tablet) {
+  .registerFormContainer {
+    width: 80%;
+  }
+}
+
+@include on-device(mobile) {
+  .registerFormContainer {
+    width: 100%;
+    backdrop-filter: blur(10px);
+  }
+
+  .registerFields {
+    margin-left: 0;
+  }
+
+  .registerForm {
+    clip-path: none;
+    width: 100%;
+    background-color: rgba($primary, 0.2);
+    justify-content: center;
+
+    input,
+    button,
+    a {
+      font-size: 2rem;
+      border-color: $white !important;
+    }
+
+    label,
+    button,
+    p,
+    a {
+      font-size: 2rem;
+      color: $white !important;
+    }
+  }
 }

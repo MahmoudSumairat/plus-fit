@@ -43,4 +43,17 @@
   .loginTitle {
     display: none;
   }
+  .loginImg {
+    width: 100%;
+  }
+
+  .fitLogo {
+    z-index: 9999;
+  }
+}
+
+@include on-device(large-tablet) {
+  .loginTitle {
+    display: none;
+  }
 }

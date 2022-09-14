@@ -16,13 +16,26 @@
   justify-content: flex-end;
 }
 
+@include on-device(large-tablet) {
+  .loginForm {
+    clip-path: polygon(48% 0, 100% 0, 100% 100%, 0% 100%);
+  }
+
+  .loginFormWrapper {
+    width: 80%;
+  }
+}
+
 @include on-device(mobile) {
   .loginFormWrapper {
     width: 100%;
     filter: none;
+    align-items: center;
+    backdrop-filter: blur(10px);
   }
 
   .loginForm {
-    clip-path: polygon(35% 0, 100% 0, 100% 100%, 0% 100%);
+    clip-path: none;
+    background-color: rgba($primary, 0.2);
   }
 }
