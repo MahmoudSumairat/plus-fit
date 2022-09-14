@@ -1,3 +1,5 @@
+@import "/src/styles/mixins";
+
 .checkoutHeader {
   display: flex;
   justify-content: space-between;
@@ -24,4 +26,15 @@
   font-weight: 500;
   width: 33.33%;
   text-align: center;
+}
+
+@include on-device(mobile) {
+  .checkoutTitle {
+    font-size: 2rem;
+    width: 50%;
+  }
+
+  .checkoutInfoContainer {
+    width: 50%;
+  }
 }

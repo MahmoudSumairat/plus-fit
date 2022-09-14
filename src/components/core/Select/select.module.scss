@@ -1,3 +1,5 @@
+@import "/src/styles/mixins";
+
 .selectContainer {
   position: relative;
   display: inline-block;
@@ -23,5 +25,11 @@
     svg {
       transform: rotateZ(180deg);
     }
+  }
+}
+
+@include on-device(mobile) {
+  .selectButton {
+    font-size: 1.3rem !important;
   }
 }
