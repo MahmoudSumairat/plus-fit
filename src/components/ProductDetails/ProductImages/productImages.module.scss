@@ -1,4 +1,5 @@
 @import "../../../styles/variables";
+@import "../../../styles/mixins";
 
 .productImagesContainer {
   display: flex;
@@ -53,5 +54,20 @@
   &.activeImage {
     opacity: 1;
     border-color: $primary;
+  }
+}
+
+@include on-device(large-tablet) {
+  .productMainImageContainer,
+  .productImagesContainer {
+    width: 100%;
+  }
+
+  .mainImage {
+    width: 100%;
+  }
+
+  .imagesList {
+    width: 100%;
   }
 }

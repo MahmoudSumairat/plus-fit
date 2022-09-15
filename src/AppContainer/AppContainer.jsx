@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { getBagItemsCountAPI } from "../API/endpoints/bagItems";
+import { reportVisitAPI } from "../API/endpoints/visits";
 import Footer from "../components/Layout/Footer/Footer";
 import Header from "../components/Layout/Header/Header";
+import { getCookie, setCookie } from "../helpers/cookies";
 import useHideLayoutComponents from "../hooks/useHideLayoutComponents";
 import useIsAuthenticated from "../hooks/useIsAuthenticated";
 import { setBagItemsCount } from "../redux/actionCreators/bag";
@@ -19,6 +21,7 @@ const AppContainer = () => {
     if (isAuthenticated) {
       fetchBagItemsCount();
     }
+    reportVisit();
   }, []);
 
   const fetchBagItemsCount = async () => {
@@ -29,6 +32,13 @@ const AppContainer = () => {
       dispatch(setBagItemsCount(data));
     } catch (err) {
       console.log(err);
+    }
+  };
+
+  const reportVisit = async () => {
+    if (!getCookie("isVisited")) {
+      setCookie("isVisited", "true");
+      await reportVisitAPI();
     }
   };
 

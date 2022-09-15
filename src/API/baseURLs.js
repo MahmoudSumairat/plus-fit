@@ -13,3 +13,5 @@ export const COUNTRIES = "/countries";
 export const MANUFACTURES = "/manufactures";
 export const TYPES = "/types";
 export const SIZES = "/sizes";
+export const ORDERS = "/orders";
+export const VISITS = "/visits";

@@ -5,9 +5,11 @@ import requestError from "./interceptors/requestError";
 
 const http = axios.create({
   baseURL: BASE_URL,
-  timeout: 1000,
+  timeout: 5000,
+  mode: "no-corse",
   headers: {
     "Content-Type": "application/json",
+    "Access-Control-Allow-Origin": "*",
   },
 });
 

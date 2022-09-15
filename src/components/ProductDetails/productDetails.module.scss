@@ -1,3 +1,5 @@
+@import "/src/styles/mixins";
+
 .productInfo {
   display: flex;
   flex-direction: column;
@@ -14,4 +16,12 @@
 .productSpecs {
   width: 100%;
   margin-top: 2rem;
+}
+
+@include on-device(large-tablet) {
+  .productInfo {
+    margin-left: 0;
+    margin-top: 3rem;
+    width: 100%;
+  }
 }
