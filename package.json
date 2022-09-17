@@ -1,6 +1,10 @@
 {
   "name": "plus-fit",
   "version": "0.1.0",
+  "engines": {
+    "node" : "16.16.0",
+    "npm" : "8.11.0"
+  },
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",
