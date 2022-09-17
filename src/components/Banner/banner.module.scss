@@ -17,6 +17,9 @@
 
 @include on-device(mobile) {
   .banner {
+    margin: 0 -4rem !important;
+    margin-top: -10rem !important;
+
     background-image: url(../../../public/images/mobile-banner.jpg);
   }
 }

@@ -5,7 +5,7 @@
   padding-top: 10rem;
 }
 
-@include on-device(tablet) {
+@include on-device(mobile) {
   .appContainer {
     padding-left: 4rem;
     padding-right: 4rem;
